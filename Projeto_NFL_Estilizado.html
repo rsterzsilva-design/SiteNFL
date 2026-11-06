@@ -1,0 +1,2985 @@
+<!DOCTYPE HTML5>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo da Aba-->
+    <title>National Footbal League</title>
+
+    <meta name="Descrição" content="Tudo sobre NFL, jogos, resultados, momentos históricos, regras e muitos mais">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="posicoes-nfl.css">
+
+    <link rel="stylesheet" href="nfl-franquias.css">
+
+    <link rel="stylesheet" href="nfl-classificacao.css">
+
+    <link rel="stylesheet" href="nfl-academy.css">
+    <!-- Funcionalidades adicionais, isoladas na seção Super Bowls -->
+    <link rel="stylesheet" href="superbowls-interativo.css">
+
+    <script src="nfl-interacoes.js" defer></script>
+
+    <script src="nfl-franquias.js" defer></script>
+
+    <script src="posicoes-nfl.js" defer></script>
+
+    <script src="nfl-classificacao.js" defer></script>
+
+    <script src="nfl-academy.js" defer></script>
+
+    <script src="dados-superbowls.js" defer></script>
+
+    <script src="superbowls-interativo.js" defer></script>
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <img src="https://a4.espncdn.com/combiner/i?img=/i/espn/misc_logos/500/nfl.png" alt="Logo da NFL">
+            <br><br>
+            
+            <nav>
+                <ul>
+                    <li><a href="#nfl-franquias">Times</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="#nfl-classificacao">Classificação</a></li>
+                    <li><a href="#nfl-guide">Regras Básicas</a></li>
+                    <li><a href="#nfl-posicoes">Guia Interativo</a></li>
+                    <li><a href="#super-bowls">Super Bowls</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <section id="nfl-franquias" aria-labelledby="nflf-title">
+        <div class="nflf-shell">
+      <header class="nflf-intro">
+        <div class="nflf-intro-copy">
+          <div class="nflf-overline"><span class="nflf-pulse" aria-hidden="true"></span> GUIA INTERATIVO · NFL 2026</div>
+          <h2 id="nflf-title">32 FRANQUIAS.<br><span>INFINITAS HISTÓRIAS.</span></h2>
+          <p>Explore as equipes da NFL, descubra seus maiores ídolos, conheça os estádios e veja os uniformes que ajudam a contar a identidade de cada franquia.</p>
+        </div>
+        <div class="nflf-intro-facts" aria-label="Organização da NFL">
+          <div class="nflf-fact"><strong>32</strong><span>FRANQUIAS</span></div>
+          <div class="nflf-fact"><strong>02</strong><span>CONFERÊNCIAS</span></div>
+          <div class="nflf-fact"><strong>08</strong><span>DIVISÕES</span></div>
+        </div>
+      </header>
+
+      <div class="nflf-toolbar" aria-label="Filtros de franquias">
+        <label class="nflf-search-wrap" for="nflf-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>
+          <input id="nflf-search" type="search" placeholder="Buscar franquia, estádio..." autocomplete="off">
+        </label>
+        <div class="nflf-conferences" role="group" aria-label="Filtrar conferência">
+          <button type="button" data-conference="Todas" class="is-active" aria-pressed="true">Todas</button>
+          <button type="button" data-conference="AFC" aria-pressed="false">AFC</button>
+          <button type="button" data-conference="NFC" aria-pressed="false">NFC</button>
+        </div>
+      </div>
+      <div class="nflf-divisions" role="group" aria-label="Filtrar divisão">
+        <button type="button" data-division="Todas" class="is-active" aria-pressed="true">Todas as divisões</button>
+        <button type="button" data-division="Leste" aria-pressed="false">Leste</button>
+        <button type="button" data-division="Norte" aria-pressed="false">Norte</button>
+        <button type="button" data-division="Sul" aria-pressed="false">Sul</button>
+        <button type="button" data-division="Oeste" aria-pressed="false">Oeste</button>
+      </div>
+
+      <div class="nflf-result-heading">
+        <p id="nflf-result-count" role="status" aria-live="polite">Carregando franquias…</p>
+        <span>SELECIONE UMA EQUIPE PARA EXPLORAR <span aria-hidden="true">↗</span></span>
+      </div>
+      <div id="nflf-team-grid" class="nflf-team-grid" aria-label="Franquias da NFL"></div>
+      <noscript><p class="nflf-alert">Para utilizar a busca, os filtros e as fichas das franquias, habilite o JavaScript no navegador.</p></noscript>
+      <div id="nflf-empty" class="nflf-empty" hidden>
+        <strong>Nenhuma franquia encontrada.</strong>
+        <span>Tente outro nome, estádio, jogador ou remova algum filtro.</span>
+        <button type="button" id="nflf-clear">Limpar filtros</button>
+      </div>
+
+      <footer class="nflf-footer">
+        <span><span class="nflf-pulse" aria-hidden="true"></span> Dados de referência: temporada 2026</span>
+      </footer>
+    </div>
+
+    <dialog class="nflf-dialog" id="nflf-dialog" aria-labelledby="nflf-dialog-title">
+      <button class="nflf-close" type="button" id="nflf-close" aria-label="Fechar detalhes">×</button>
+      <div id="nflf-dialog-content"></div>
+    </dialog>
+  </section>
+
+        <section id="jogos">
+            <div class="Jogos">
+                <h2>🏈 Calendário Completo da Temporada 2026/27 da NFL</h2>
+
+                <p>Confira os jogos e resultados da temporada 26/27</p>
+
+
+        <div class="week-title">Semana 1</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+            </thead>
+
+                <tbody>
+                    <tr>
+                        <td>09/09/2026 - 21:20</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks 13 x 10 New England Patriots</td>
+                        <td><a href="https://www.youtube.com/watch?v=wBzmQ72v49E&t=7s&pp=ygUhbmZsIDIwMjYgc2VhaGF3a3MgcGF0cmlvdHMgd2VlayAx0gcJCTIMAYcqIYzv" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>10/09/2026 - 21:35</td>
+                        <td>Melbourne Cricket Ground (Melbourne, Austrália)</td>
+                        <td>Los Angeles Rams 7 x 27 San Francisco 49ers</td>
+                        <td><a href="https://www.youtube.com/watch?v=wwP2NF8gImM" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers 20 x 13 Atlanta Falcons</td>
+                        <td><a href="https://www.youtube.com/watch?v=kqFmoQUPryk&t=123s" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans 10 x 23 New York Jets</td>
+                        <td><a href="https://www.youtube.com/watch?v=m5wwW7A9gvo&t=471s&pp=0gcJCf4LAYcqIYzv" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers 37 x 59 Chicago Bears</td>
+                        <td><a href="https://www.youtube.com/watch?v=EsLgO_ow5MI" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals 33 x 27 Tampa Bay Buccaneers</td>
+                        <td><a href="https://www.youtube.com/watch?v=XWAtBhTaeWA&t=600s" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions 31 x 30 New Orleans Saints (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=ARE-1pI2mz4&t=145s" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans 31 x 36 Buffalo Bills</td>
+                        <td><a href="https://www.youtube.com/watch?v=eCe-Fjed4z8" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>EverBank Field</td>
+                        <td>Jacksonville Jaguars 34 x 10 Cleveland Browns</td>
+                        <td><a href="https://www.youtube.com/watch?v=NLq9aKBOo6" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 14:00</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts 23 x 41 Baltimore Ravens</td>
+                        <td><a href="https://www.youtube.com/watch?v=w6JNCgfjVWo&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 17:25</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers 14 x 26 Arizona Cardinals</td>
+                        <td><a href="https://www.youtube.com/watch?v=nWppss0pvMY&t=2s" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 17:25</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders 27 x 13 Miami Dolphins</td>
+                        <td><a href="https://www.youtube.com/watch?v=rwNnZ2iRtrA&t=93s" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 17:25</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings 39 x 22 Green Bay Packers</td>
+                        <td><a href="https://www.youtube.com/watch?v=joCZZWaMfGg&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 17:25</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles 24 x 22 Washington Commanders</td>
+                        <td><a href="https://www.youtube.com/watch?v=ZqLnPWQPkCs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>13/09/2026 - 21:20</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants 28 x 20 Dallas Cowboys</td>
+                        <td><a href="https://www.youtube.com/watch?v=LR0uLGHm3Io" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>14/09/2026 - 21:15</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs 31 x 10 Denver Broncos</td>
+                        <td><a href="https://www.youtube.com/watch?v=bxK3C8uPqYA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+        <div class="week-title">Semana 2</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>17/09/2026 - 21:15</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills 41 x 31 Detroit Lions</td>
+                        <td><a href="https://www.youtube.com/watch?v=G5A9pIwnQwc" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans 20 x 24 Philadelphia Eagles</td>
+                        <td><a href="https://www.youtube.com/watch?v=FLWSbNicdhs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers 19 x 23 Cleveland Browns</td>
+                        <td><a href="https://www.youtube.com/watch?v=Dzw97GckbnM" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens 17 x 24 New Orleans Saints</td>
+                        <td><a href="https://www.youtube.com/watch?v=taV4Euej_UM" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears 3 x 9 Minnesota Vikings</td>
+                        <td><a href="https://www.youtube.com/watch?v=X5qJI44rPW0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans 6 x 20 Cincinnati Bengals</td>
+                        <td><a href="https://www.youtube.com/watch?v=aZy1m-pyX8I" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots 20 x 3 Pittsburgh Steelers</td>
+                        <td><a href="https://www.youtube.com/watch?v=eKlVFUNm7BI" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>Atlanta Falcons 3 x 34 Carolina Panthers</td>
+                        <td><a href="https://www.youtube.com/watch?v=PCe_f_rxJfU" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 14:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets 17 x 20 Green Bay Packers (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=Ruk5pjJ6ynQ&t=426s&pp=0gcJCSQMAYcqIYzv" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 17:05</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos 20 x 13 Jacksonville Jaguars</td>
+                        <td><a href="https://www.youtube.com/watch?v=bGoj6Mktog0&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 17:05</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers 14 x 26 Las Vegas Raiders</td>
+                        <td><a href="https://www.youtube.com/watch?v=cyk5Vci3k-c&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 17:25</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals 7 x 31 Seattle Seahawks</td>
+                        <td><a href="https://www.youtube.com/watch?v=LeIRzngAjR0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 17:25</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys 37 x 20 Washington Commanders</td>
+                        <td><a href="https://www.youtube.com/watch?v=CzHaJny9gC8" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 17:25</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers 35 x 13 Miami Dolphins</td>
+                        <td><a href="https://www.youtube.com/watch?v=LeIRzngAjR0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>20/09/2026 - 17:25</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs 33 x 30 Indianapolis Colts (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=1hX8M0S2xtM" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>21/09/2026 - 21:15</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams 28 x 6 New York Giants</td>
+                        <td><a href="https://www.youtube.com/watch?v=vGUdtS6anIU" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+        <div class="week-title">Semana 3</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>24/09/2026 - 21:15</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers 14 x 35 Atlanta Falcons</td>
+                        <td><a href="https://www.youtube.com/watch?v=MeSp-AyXvdc&pp=0gcJCS8MAYcqIYzv" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers 30 x 27 Cincinnati Bengals</td>
+                        <td><a href="https://www.youtube.com/watch?v=s8E1CHdI3cA&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks 31 x 33 Washington Commanders</td>
+                        <td><a href="https://www.youtube.com/watch?v=HIA-3ZYlFCg" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns 21 x 18 Carolina Panthers</td>
+                        <td><a href="https://www.youtube.com/watch?v=EyGW6pqjIgs&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions 31 x 24 New York Jets</td>
+                        <td><a href="https://www.youtube.com/watch?v=PCYue5jJNgA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts 19 x 17 Houston Texans</td>
+                        <td><a href="https://www.youtube.com/watch?v=6NaD5AgBFG4" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>EverBank Stadium</td>
+                        <td>Jacksonville Jaguars 35 x 6 New England Patriots</td>
+                        <td><a href="https://www.youtube.com/watch?v=Oi9HQlp-ysA&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills 24 x 16 Los Angeles Chargers</td>
+                        <td><a href="https://www.youtube.com/watch?v=tjior_VaUWo" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins 10 x 24 Kansas City Chiefs</td>
+                        <td><a href="https://www.youtube.com/watch?v=mLlOgKi5ivM" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 14:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants 12 x 7 Tennessee Titans</td>
+                        <td><a href="https://www.youtube.com/watch?v=3uoNyp0J2tw" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 17:05</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers 36 x 30 Arizona Cardinals</td>
+                        <td><a href="https://www.youtube.com/watch?v=7ngu-tT0PQs&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 17:05</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers 16 x 23 Minnesota Vikings</td>
+                        <td><a href="https://www.youtube.com/watch?v=PwKZhQg5n6w" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 17:25</td>
+                        <td>Maracanã (Rio de Janeiro, Brasil)</td>
+                        <td>Dallas Cowboys 31 x 34 Baltimore Ravens</td>
+                        <td><a href="https://www.youtube.com/watch?v=3E4KMzuLxds&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 17:25</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints 27 x 35 Las Vegas Raiders</td>
+                        <td><a href="https://www.youtube.com/watch?v=xcj0NwyEJUk&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>27/09/2026 - 21:20</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos 30 x 26 Los Angeles Rams</td>
+                        <td><a href="https://www.youtube.com/watch?v=5WqWyPWjtKs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>28/09/2026 - 21:15</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears 27 x 7 Philadelphia Eagles</td>
+                        <td><a href="https://www.youtube.com/watch?v=M6jLVkCFMO0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+        <div class="week-title">Semana 4</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>01/10/2026 - 21:15</td>
+                        <td>Huntington bank Field</td>
+                        <td>Cleveland Browns 27 x 24 Pittsburgh Steelers</td>
+                        <td><a href="https://www.youtube.com/watch?v=CsN2MkFxTAs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 10:30</td>
+                        <td>Tottenham Hotspur Stadium (Londres, Inglaterra)</td>
+                        <td>Washington Commanders 13 x 30 Indianapolis Colts</td>
+                        <td><a href="https://www.youtube.com/watch?v=j1f99MbAg3w" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles 20 x 24 Los Angeles Rams</td>
+                        <td><a href="https://www.youtube.com/watch?v=_tuPznFP9q4" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills 26 x 29 New England Patriots</td>
+                        <td><a href="https://www.youtube.com/watch?v=Z5zAM_GLGI0&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears 23 x 12 New York Jets</td>
+                        <td><a href="https://www.youtube.com/watch?v=IlcC1zFWyVw" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04///10/2026 - 14:00</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals 17 x 22 Jacksonville Jaguars</td>
+                        <td><a href="https://www.youtube.com/watch?v=Df2kFLQSv-s" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans 30 x 34 Dallas Cowboys</td>
+                        <td><a href="https://www.youtube.com/watch?v=Yayn1UWwu1Y&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens 24 x 18 Tennessee Titans</td>
+                        <td><a href="https://www.youtube.com/watch?v=TARrcUmxNnA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers 14 x 17 Green Bay Packers</td>
+                        <td><a href="https://www.youtube.com/watch?v=A_x6ESL7QII" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 14:00</td>
+                        <td>MetLife</td>
+                        <td>New York Giants 36 x 24 Arizona Cardinals</td>
+                        <td><a href="https://www.youtube.com/watch?v=xMAlRJRKUI4" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 17:05</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings 15 x 10 Miami Dolphins</td>
+                        <td><a href="https://www.youtube.com/watch?v=YHo13wCIHT4&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 17:25</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders 27 x 30 Kansas City Chiefs</td>
+                        <td><a href="https://www.youtube.com/watch?v=emsdXFiMYSw&list=PLONEbSB3aXoU" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 17:25</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks 30 x 23 Los Angeles Chargers</td>
+                        <td><a href="https://www.youtube.com/watch?v=a0oq3jtgsvE&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 17:25</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers 24 x 14 Denver Broncos</td>
+                        <td><a href="https://www.youtube.com/watch?v=JBsQZBmpFRQ" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>04/10/2026 - 21:20</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers 32 x 26 Detroit Lions</td>
+                        <td><a href="https://www.youtube.com/watch?v=rLZr1-SZXAs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>05/10/2026 - 21:15</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints 24 x 45 Atlanta Falcons</td>
+                        <td><a href="https://www.youtube.com/watch?v=PHsEu982JTI" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+        <div class="week-title">Semana 5</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>08/10/2026 - 21:15</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys 16 x 24 Tampa Bay Buccaneers</td>
+                        <td><a href="https://www.youtube.com/watch?v=_8ivjzd6Fd0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 10:30</td>
+                        <td>Tottenham Hotspur Stadium (Londres, Inglaterra)</td>
+                        <td>Jacksonville Jaguars 19 x 17 Philadelphia Eagles</td>
+                        <td><a href="https://www.youtube.com/watch?v=WXw2IIj01Sg" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                     <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers 34 x 22 Indianapolis Colts</td>
+                        <td><a href="https://www.youtube.com/watch?v=K3VPDshx1a0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders 27 x 27 New York Giants</td>
+                        <td><a href="https://www.youtube.com/watch?v=2ajt4z4vKfA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots 45 x 17 Las Vegas Raiders</td>
+                        <td><a href="https://www.youtube.com/watch?v=cvF74D426BA&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints 13 x 23 Minnesota Vikings</td>
+                        <td><a href="https://www.youtube.com/watch?v=54keyd_3oTo" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets 17 x 12 Cleveland Browns</td>
+                        <td><a href="https://www.youtube.com/watch?v=620WOle7Trw" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers 31 x 7 Chicago Bears</td>
+                        <td><a href="https://www.youtube.com/watch?v=4cIbUOPPXVI" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans 3 x 26 Houston Texans</td>
+                        <td><a href="https://www.youtube.com/watch?v=IVhfdib9GT0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 14:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins 24 x 26 Cincinnati Bengals</td>
+                        <td><a href="https://www.youtube.com/watch?v=weXTLmdSAZY" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 17:05</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers 17 x 23 Denver Broncos</td>
+                        <td><a href="https://www.youtube.com/watch?v=4oqE08iZYwI" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 17:25</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals 21 x 45 Detroit Lions</td>
+                        <td><a href="https://www.youtube.com/watch?v=XqbqQ1PGGm0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 17:25</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks 29 x 32 San Francisco 49ers</td>
+                        <td><a href="https://www.youtube.com/watch?v=ewhDLCUFmbU&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>11/10/2026 - 21:20</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>Atlanta Falcons 23 x 30 Baltimore Ravens (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=2TIOp3nQU80" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>12/10/2026 - 21:15</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams 34 x 37 Buffalo Bills (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=J88uHdcbNvw" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+        <div class="week-title">Semana 6</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>15/10/2026 - 21:15</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos 17 x 14 Seattle Seahawks</td>
+                        <td><a href="https://www.youtube.com/watch?v=aA5C9K6vDD8" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 10:30</td>
+                        <td>Wembley (Londres, Inglaterra)</td>
+                        <td>Jacksonville Jaguars 31 x 34 Houston Texans</td>
+                        <td><a href="https://www.youtube.com/watch?v=qOliVATrXRY" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants 27 x 34 New Orleans Saints</td>
+                        <td><a href="https://www.youtube.com/watch?v=401jJLjBe_0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>Atlanta Falcons 23 x 31 Chicago Bears</td>
+                        <td><a href="https://www.youtube.com/watch?v=aBkA5DFTjTA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns 13 x 10 Baltimore Ravens</td>
+                        <td><a href="https://www.youtube.com/watch?v=iSWvBxMXWyg" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts 20 x 26 Tennessee Titans</td>
+                        <td><a href="https://www.youtube.com/watch?v=1xAadxkGHX8" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots 26 x 19 New York Jets</td>
+                        <td><a href="https://www.youtube.com/watch?v=TwhqVnrQVIo" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles 14 x 25 Carolina Panthers</td>
+                        <td><a href="https://www.youtube.com/watch?v=q9XNTd9gaOE" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 14:00</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers 19 x 26 Pittsburgh Steelers (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=vf4ksuXiQ1M" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 17:05</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams 16 x 18 Arizona Cardinals</td>
+                        <td><a href="https://www.youtube.com/watch?v=n0P9F6etnRE" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 17:25</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs 22 x 6 Los Angeles Chargers</td>
+                        <td><a href="https://www.youtube.com/watch?v=QC4U2oCO1UY&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 17:25</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders 30 x 33 Buffalo Bills</td>
+                        <td><a href="https://www.youtube.com/watch?v=eZ8YTVcl-0c" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>18/10/2026 - 21:20</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers 23 x 13 Dallas Cowboys</td>
+                        <td><a href="https://www.youtube.com/watch?v=5xB0vJWbJG4&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>19/10/2026 - 21:15</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers 23 x 17 Washington Commanders</td>
+                        <td><a href="https://www.youtube.com/watch?v=Wc6iOaGoQ8k" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+             <div class="week-title">Semana 7</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>22/10/2026 - 21:15</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears 30 x 24 New England Patriots</td>
+                        <td><a href="https://www.youtube.com/watch?v=Degny8CeJcA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                     <tr>
+                        <td>25/10/2026 - 10:30</td>
+                        <td>Stade de France (Paris, França)</td>
+                        <td>New Orleans Saints 10 x 16 Pittsburgh Steelers</td>
+                        <td><a href="https://www.youtube.com/watch?v=WDgHHCsC4p0&pp=0gcJCS8MAYcqIYzv" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td>Mercedes-Benz Stadium </td>
+                        <td>Atlanta Falcons 29 x 20 San Francisco 49ers</td>
+                        <td><a href="https://www.youtube.com/watch?v=pt4F7wXFnuU&feature=youtu.be" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td> M&T Bank Stadium</td>
+                        <td>Baltimore Ravens 13 x 35 Cincinnati Bengals</td>
+                        <td><a href="https://www.youtube.com/watch?v=TjN8Cdaz9XQ" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers 13 x 43 Tampa Bay Buccaneers</td>
+                        <td><a href="https://www.youtube.com/watch?v=eTrWOUzh3Xg" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets 25 x 28 Miami Dolphins</td>
+                        <td><a href="https://www.youtube.com/watch?v=wqB-iWjFt2M" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings 16 x 10 Indianapolis Colts</td>
+                        <td><a href="https://www.youtube.com/watch?v=GZAPermgJdI" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans 24 x 27 Cleveland Browns</td>
+                        <td><a href="https://www.youtube.com/watch?v=_4OJ6iu8K1I&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 14:00</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans 21 x 27 New York Giants</td>
+                        <td><a href="https://www.youtube.com/watch?v=oy5jJycVydI&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 - 17:05</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals 16 x 30 Denver Broncos</td>
+                        <td><a href="https://www.youtube.com/watch?v=ELahNguVTLM&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                       <tr>
+                        <td>25/10/2026 - 17:25</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions 20 x 17 Green Bay Packers</td>
+                        <td><a href="https://www.youtube.com/watch?v=e8wTscbesfA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                       <tr>
+                        <td>25/10/2026 - 17:25</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders 21 x 35 Los Angeles Rams</td>
+                        <td><a href="https://www.youtube.com/watch?v=qIrfktFLgvs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                       <tr>
+                        <td>25/10/2026 - 21:20</td>
+                        <td>Lumen Field </td>
+                        <td>Seattle Seahawks 20 x 3 Kansas City Chiefs</td>
+                        <td><a href="https://www.youtube.com/watch?v=KQX8Yv7-Ct0" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                       <tr>
+                        <td>26/10/2026 - 21:15</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles 21 x 38 Dallas Cowboys</td>
+                        <td><a href="https://www.youtube.com/watch?v=zw0HZh5KAo8" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 8</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>29/10/2026 - 21:15</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers 27 x 19 Carolina Panthers</td>
+                        <td><a href="https://www.youtube.com/watch?v=Jc469aAa2p4" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets 33 x 38 Las Vegas Raiders</td>
+                        <td><a href="https://www.youtube.com/watch?v=6AGlsngpWQY" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals 43 x 36 Tennessee Titans (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=6VxUrJq09dw" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>At&T Stadium</td>
+                        <td>Dallas Cowboys 30 x 33 Arizona Cardinals (P)</td>
+                        <td><a href="https://www.youtube.com/watch?v=dHICMMtaWLE" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions 19 x 15 Minnesota Vikings</td>
+                        <td><a href="https://www.youtube.com/watch?v=SiCXTq8h_Nw" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>EverBank Field</td>
+                        <td>Jacksonville Jaguars 42 x 7 Indianapolis colts</td>
+                        <td><a href="https://www.youtube.com/watch?v=vH7g0oFcIFA" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers 16 x 0 Atlanta Falcons</td>
+                        <td><a href="https://www.youtube.com/watch?v=Q3kiAn5P0CQ" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers 27 x 6 Cleveland Browns</td>
+                        <td><a href="https://www.youtube.com/watch?v=7Ur0PLZHilM" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 15:00</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills 36 x 10 Baltimore Ravens</td>
+                        <td><a href="https://www.youtube.com/watch?v=xw87PjXVKUo" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 18:05</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams 24 x 9 Los Angeles Chargers</td>
+                        <td><a href="https://www.youtube.com/watch?v=Z5w0O7Jprdk&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 18:25</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos 28 x 24 Kansas City Chiefs</td>
+                        <td><a href="https://www.youtube.com/watch?v=RtsIPimlwek" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 18:25</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins 19 x 24 New England Patriots</td>
+                        <td><a href="https://www.youtube.com/watch?v=EL_8uTSc1PY&feature=onebox" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>01/11/2026 - 22:20</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders 27 x 10 Philadelphia Eagles</td>
+                        <td><a href="https://www.youtube.com/watch?v=ZqLnPWQPkCs" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>   
+
+                    <tr>
+                        <td>02/11/2026 - 22:15</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks 17 x 34 Chicago Bears</td>
+                        <td><a href="https://www.youtube.com/watch?v=AY__QgEK9rU" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 9</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>05/11/2026 - 22:15</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens x Jacksonville Jaguars</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 11:30</td>
+                        <td>Santiago Bernabéu (Madrid, Espanha)</td>
+                        <td>Atlanta Falcons x Cincinnati Bengals</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints x Cleveland Browns</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders x Los Angeles Rams</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>Lucas oil Stadium</td>
+                        <td>Indianapolis Colts x Dallas Cowboys</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs x New York Jets</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins x Detroit Lions</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers x Denver Broncos</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 15:00</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles x New York Giants</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 18:05</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers x Houston Texans</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 18:05</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers x Las Vegas Raiders</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 18:25</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots x Green Bay Packers</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 18:25</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle seahawks x Arizona Cardinals</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>08/11/2026 - 22:20</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears x Tampa Bay Buccaneers</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>09/11/2026 - 22:15</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings x Buffalo Bills</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 10</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>12/11/2026 - 22:15</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants x Washington Commanders</td>
+                        <td><a href="" class="youtube-btn" target="_blank">Assistir</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 11:30</td>
+                        <td>Allianz Arena (Munique, Alemanha)</td>
+                        <td>Detroit Lions x New England Patriots</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints x Carolina Panthers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>Atlanta Falcons x Kansas City Chiefs</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns x Houston Texans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers x Minnesota Vikings</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts x Miami Dolphins</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets x Buffalo Bills</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 15:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans x Jacksonville Jaguars</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 18:05</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals x Los Angeles Rams</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 18:00</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders x Seattle Seahawks</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 18:25</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys x San Francisco 49ers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/11/2026 - 22:20</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals x Pittsburgh Steelers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>16/11/2026 - 22:15</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens x Los Angeles Chargers</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 11</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>19/11/2026 - 22:15</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans x Indianapolis Colts</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs x Arizona Cardinals</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills x Miami Dolphins</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers x Baltimore Ravens</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears x New Orleans Saints</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys x Tennessee Titans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions x Tampa Bay Buccaneers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants x Jacksonville Jaguars</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 18:05</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers x New York Jets</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 18:25</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos x Las Vegas Raiders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 18:25</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles x Pittsburgh Steelers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2026 - 22:20</td>
+                        <td>Estadio Azteca (Cidade do México, México)</td>
+                        <td>San Francisco 49ers x Minnesota Vikings</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>23/11/2026 - 22:15</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders x Cincinnati Bengals</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 12</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>25/11/2026 - 22:00</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams x Green Bay Packers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>26/11/2026 - 15:00</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions x Chicago Bears</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>26/11/2026 - 18:30</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys x Philadelphia Eagles</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>26/11/2026 - 22:20</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills x Kansas City Chiefs</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/11/2026 - 17:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers x Denver Broncos</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 15:00</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans x Baltimore Ravens</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>19/11/2026 - 15:00</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings x Atlanta Falcons</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 15:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins x New York Jets</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 15:00</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts x New York Giants</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 15:00</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals x New Orleans Saints</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 15:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns x Las Vegas Raiders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>29/11/2026 - 18:05</td>
+                        <td>EverBank Stadium</td>
+                        <td>Jacksonville Jaguars x Tennessee Titans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 18:25</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals x Washington Commanders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 18:25</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers x Seattle Seahawks</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>29/11/2026 - 22:20</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Charges x New Englend Patriots</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>30/11/2026 - 22:15</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers x Carolina Panthers</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 13</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>03/02/2026 - 22:15</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams x Kansas City Chiefs</td>
+                       <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 15:00</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers x Los Angeles Chargers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/02/2026 - 15:00</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears x Jacksonville Jaguars</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 15:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns x Cincinnati Bengals</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 15:00</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints x Green Bay Packers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants x San Francisco 49ers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 15:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans x Washington Commanders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 15:00</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>Atlanta Falcons x Detroit Lions</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 18:05</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos x Miami Dolphins</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 18:05</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals x Philadelphia Eagles</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 18:25</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings x Carolina Panthers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 18:25</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots x Buffalo Bills</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026 - 22:20</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers x Houston Texans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>07/12/2026 - 22:15</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks x Dallas Cowboys</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 14</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>10/12/2026 - 22:15</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots x Minnesota Vikings</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets x Denver Broncos</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles x Indianapolis Colts</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers x New Orleans Saints</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns x Atlanta Falcons</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions x Tennessee Titans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins x Chicago Bears</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens x Tampa Bay Buccaneers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 15:00</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders x Houston Texans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 18:05</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders x Los Angeles Chargers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 18:25</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals x Kansas City Chiefs</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 18:25</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks x New York Giants</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 18:25</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers x Los Angeles Rams</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>13/12/2026 - 22:20</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers x Buffalo Bills</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>14/12/2026 - 22:15</td>
+                        <td>EverBank Stadium</td>
+                        <td>Jacksonville Jaguars x Pittsburgh Steelers</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 15</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>17/12/2026 - 22:15</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers x San Francisco 49ers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>19/12/2026 - 19:00</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles x Seattle Seahawks</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>19/12/2026 - 22:20</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills x Chicago Bears</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers x New Orleans Saints</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans x Indianapolis Colts</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders x Atlanta Falcons</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers x Cincinnati Bengals</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers x Miami Dolphins</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans x Jacksonville Jaguars</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers x Baltimore Ravens</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants x Cleveland Browns</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 18:05</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals x New York Jets</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 18:25</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams x Dallas Cowboys</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 18:25</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders x Denver Broncos</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>20/12/2026 - 22:20</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings x Detroit Lions</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>21/12/2026 - 22:15</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs x New England Patriots</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 16</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>24/12/2026 - 22:15</td>
+                        <td>Lincoln Financial Field</td>
+                        <td>Philadelphia Eagles x Houston Texans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>15/12/2026 - 15:00</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears x Green Bay Packers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>25/12/2026 - 18:30</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos x Buffalo Bills</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>25/12/2026 - 22:15</td>
+                        <td>Lumen Field</td>
+                        <td>Seattle Seahawks x Los Angeles Rams</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens x Cleveland Browns</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>Atlanta Falcons x Tampa Bay Buccaneers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints x Arizona Cardinals</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>Acrisure Stadium</td>
+                        <td>Pittsburgh Steelers x Carolina Panthers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota Vikings x Washington Commanders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts x Cincinnati Bengals</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets x New England Patriots</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 15:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins x Los Angeles Chargers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 18:05</td>
+                        <td>Allegiant Stadium</td>
+                        <td>Las Vegas Raiders x Tennessee Titans</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 18:25</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs x San Francisco 49ers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/12/2026 - 22:20</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys x Jacksonville Jaguars</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>28/12/2026 - 22:15</td>
+                        <td>Ford Field</td>
+                        <td>Detroit Lions x New York Giants</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 17</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>31/12/2027 - 22:15</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals x Baltimore Ravens</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>Mercedes-Benz Stadium</td>
+                        <td>New Orleans Saints x Atlanta Falcons</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>Huntington Bank Field</td>
+                        <td>Cleveland Browns x Indianapolis Colts</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>AT&T Stadium</td>
+                        <td>Dallas Cowboys x New York Giants</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>Nissan Stadium</td>
+                        <td>Tennessee Titans x Pittsburgh Steelers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>Miami Dolphins x Buffalo Bills</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Jets x Minnesota Vikings</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 15:00</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers x Seattle Seahawks</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots x Denver Broncos</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Chargers x Kansas City Chiefs</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Raymond James Stadium</td>
+                        <td>Tampa Bay Buccaneers x Los Angeles Rams</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>EverBank Stadium</td>
+                        <td>Jacksonville Jaguars x Washington Commanders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 18:05</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals x Las Vegas Raiders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 18:25</td>
+                        <td>Soldier Field</td>
+                        <td>Chicago Bears x Detroit Lions</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/01/2027 - 22:20</td>
+                        <td>Levi's Stadium</td>
+                        <td>San Francisco 49ers x Philadelphia Eagles</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>04/01/2026 - 22:15</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers x Houston Texans</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <div class="week-title">Semana 18</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data - Horário</th>
+                        <th>Estádio</th>
+                        <th>Jogo (Casa x Fora)</th>
+                        <th>Melhores Momentos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>A definir</td>
+                        <td>Highmark Stadium</td>
+                        <td>Buffalo Bills x New York Jets</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Paycor Stadium</td>
+                        <td>Cincinnati Bengals x Cleveland Browns</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Empower Field at Mile High</td>
+                        <td>Denver Broncos x Los Angeles Chargers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Lambeau Field</td>
+                        <td>Green Bay Packers x Detroit Lions</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Lucas Oil Stadium</td>
+                        <td>Indianapolis Colts x Jacksonville Jaguars</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>GEHA Field at Arrowhead Stadium</td>
+                        <td>Kansas City Chiefs x Las Vegas Raiders</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>SoFi Stadium</td>
+                        <td>Los Angeles Rams x Seattle Seahawks</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>U.S. Bank Stadium</td>
+                        <td>Minnesota vikings x Chicago Bears</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Gillette Stadium</td>
+                        <td>New England Patriots x Miami Dolphins</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Caesars Superdome</td>
+                        <td>New Orleans Saints x Tampa Bay Buccaneers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>MetLife Stadium</td>
+                        <td>New York Giants</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>State Farm Stadium</td>
+                        <td>Arizona Cardinals x San Francisco 49ers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Northwest Stadium</td>
+                        <td>Washington Commanders x Dallas Cowboys</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>Bank of America Stadium</td>
+                        <td>Carolina Panthers x Atlanta Falcons</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>M&T Bank Stadium</td>
+                        <td>Baltimore Ravens x Pittsburgh Steelers</td>
+                        <td>A disputar</td>
+                    </tr>
+
+                    <tr>
+                        <td>A definir</td>
+                        <td>NRG Stadium</td>
+                        <td>Houston Texans x Tennessee Titans</td>
+                        <td>A disputar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+
+
+
+        </div>
+    </section>
+
+
+    <section id="nfl-classificacao" class="nfl-standings" aria-labelledby="nfl-standings-titulo">
+        <div class="nfl-standings__topo">
+        <div>
+            <p class="nfl-standings__etiqueta">TEMPORADA REGULAR • 2026</p>
+            <h2 id="nfl-standings-titulo">CLASSIFICAÇÃO</h2>
+            <p class="nfl-standings__subtitulo">AFC e NFC</p>
+        </div>
+            <button id="nfl-standings-atualizar" class="nfl-standings__botao" type="button">
+            <span aria-hidden="true">↻</span> Atualizar
+            </button>
+        </div>
+
+        <div class="nfl-standings__barra">
+            <div class="nfl-standings__abas" role="group" aria-label="Filtrar conferência">
+            <button type="button" class="nfl-standings__aba is-active" data-nfl-conferencia="ALL" aria-pressed="true">Todas</button>
+            <button type="button" class="nfl-standings__aba" data-nfl-conferencia="AFC" aria-pressed="false">AFC</button>
+            <button type="button" class="nfl-standings__aba" data-nfl-conferencia="NFC" aria-pressed="false">NFC</button>
+            </div>
+            <p id="nfl-standings-status" class="nfl-standings__status" role="status" aria-live="polite">Preparando classificação...</p>
+        </div>
+
+        <div id="nfl-standings-grid" class="nfl-standings__grid" aria-busy="true"></div>
+    </section>
+
+
+    <section id="nfl-guide" aria-labelledby="nfl-guide-title">
+        <div class="nfl-guide__wrap">
+            <header class="nfl-guide__header">
+            <p class="nfl-guide__eyebrow">NFL • GUIA RÁPIDO</p>
+            <h2 id="nfl-guide-title">FUTEBOL AMERICANO <span>SEM COMPLICAÇÃO</span></h2>
+            <p>Conheça o básico do jogo em quatro passos. Selecione um assunto para descobrir mais.</p>
+            </header>
+
+            <div class="nfl-guide__tabs" role="tablist" aria-label="Assuntos sobre as regras da NFL">
+            <button type="button" id="nfl-guide-tab-basico" class="nfl-guide__tab is-active" role="tab" aria-selected="true" aria-controls="nfl-guide-panel-basico" data-guide-tab="basico"><span>01</span> O jogo</button>
+            <button type="button" id="nfl-guide-tab-downs" class="nfl-guide__tab" role="tab" aria-selected="false" aria-controls="nfl-guide-panel-downs" tabindex="-1" data-guide-tab="downs"><span>02</span> Downs</button>
+            <button type="button" id="nfl-guide-tab-pontos" class="nfl-guide__tab" role="tab" aria-selected="false" aria-controls="nfl-guide-panel-pontos" tabindex="-1" data-guide-tab="pontos"><span>03</span> Pontuação</button>
+            <button type="button" id="nfl-guide-tab-faltas" class="nfl-guide__tab" role="tab" aria-selected="false" aria-controls="nfl-guide-panel-faltas" tabindex="-1" data-guide-tab="faltas"><span>04</span> Faltas</button>
+            </div>
+
+            <div id="nfl-guide-panel-basico" class="nfl-guide__panel" role="tabpanel" aria-labelledby="nfl-guide-tab-basico" data-guide-panel="basico">
+            <div class="nfl-guide__intro"><h3>Como funciona uma partida?</h3><p>O objetivo é avançar com a bola até a área de pontuação adversária ou marcar com um chute.</p></div>
+            <div class="nfl-guide__grid nfl-guide__grid--three">
+                <article class="nfl-guide__card"><span class="nfl-guide__symbol" aria-hidden="true">🏈</span><strong>11 por equipe</strong><p>O ataque tenta avançar. A defesa tenta impedir. Há também equipes especiais para chutes.</p></article>
+                <article class="nfl-guide__card"><span class="nfl-guide__symbol" aria-hidden="true">⏱</span><strong>4 períodos</strong><p>São quatro quartos de 15 minutos de relógio de jogo. As interrupções tornam a partida mais longa.</p></article>
+                <article class="nfl-guide__card"><span class="nfl-guide__symbol" aria-hidden="true">📏</span><strong>100 jardas</strong><p>O campo tem 100 jardas entre as linhas de gol, além de duas end zones de 10 jardas.</p></article>
+            </div>
+            <p class="nfl-guide__hint">Vence quem soma mais pontos ao final da partida, caso termine o tempo regulamentar com os times empatados, é desputada uma prorrogação de 10 minutos, caso não haja vencedor o jogo termina empatado.</p>
+        </div>
+
+        <div id="nfl-guide-panel-downs" class="nfl-guide__panel" role="tabpanel" aria-labelledby="nfl-guide-tab-downs" data-guide-panel="downs" hidden>
+        <div class="nfl-guide__intro"><h3>O que são as quatro descidas?</h3><p>O ataque tem até quatro tentativas (downs) para avançar pelo menos 10 jardas e conquistar uma nova série.</p></div>
+        <div class="nfl-guide__steps" aria-label="Exemplo de uma sequência de downs">
+            <div class="nfl-guide__step"><b>1ª</b><span>Começa a série<br><small>10 jardas para avançar</small></span></div>
+            <div class="nfl-guide__step"><b>2ª</b><span>Nova tentativa<br><small>Após a primeira jogada</small></span></div>
+            <div class="nfl-guide__step"><b>3ª</b><span>Mais uma chance<br><small>Se ainda faltar distância</small></span></div>
+            <div class="nfl-guide__step"><b>4ª</b><span>Decisão importante<br><small>Jogar, chutar ou dar punt</small></span></div>
+        </div>
+        <div class="nfl-guide__note"><strong>First Down:</strong> ao atingir a distância necessária, o ataque recebe uma nova série de descidas. Se tentar avançar na quarta descida e falhar, perde a posse da bola no ponto onde a jogada terminar.</div>
+        </div>
+
+        <div id="nfl-guide-panel-pontos" class="nfl-guide__panel" role="tabpanel" aria-labelledby="nfl-guide-tab-pontos" data-guide-panel="pontos" hidden>
+        <div class="nfl-guide__intro"><h3>Como se marca pontos?</h3><p>Toque ou selecione um card para ver uma explicação rápida sobre cada pontuação.</p></div>
+        <div class="nfl-guide__grid nfl-guide__grid--scores">
+            <button type="button" class="nfl-guide__score" data-guide-score="td" aria-pressed="true"><span>TOUCHDOWN</span><strong>6 <small>pts</small></strong></button>
+            <button type="button" class="nfl-guide__score" data-guide-score="fg" aria-pressed="false"><span>FIELD GOAL</span><strong>3 <small>pts</small></strong></button>
+            <button type="button" class="nfl-guide__score" data-guide-score="safety" aria-pressed="false"><span>SAFETY</span><strong>2 <small>pts</small></strong></button>
+            <button type="button" class="nfl-guide__score" data-guide-score="xp" aria-pressed="false"><span>EXTRA POINT</span><strong>1 <small>pt</small></strong></button>
+            <button type="button" class="nfl-guide__score" data-guide-score="two" aria-pressed="false"><span>CONVERSÃO DE 2</span><strong>2 <small>pts</small></strong></button>
+        </div>
+        <div class="nfl-guide__note" id="nfl-guide-score-explanation" role="status" aria-live="polite"><strong>Touchdown:</strong> acontece quando a equipe marca na end zone adversária. Depois, há a oportunidade de tentar pontos adicionais.</div>
+        </div>
+
+        <div id="nfl-guide-panel-faltas" class="nfl-guide__panel" role="tabpanel" aria-labelledby="nfl-guide-tab-faltas" data-guide-panel="faltas" hidden>
+        <div class="nfl-guide__intro"><h3>Principais faltas da NFL</h3><p>Abra cada item para entender o que o árbitro está marcando. A aplicação exata pode variar conforme a jogada.</p></div>
+        <div class="nfl-guide__accordions">
+            <details><summary><span><b>False Start</b><small>Movimento ilegal antes do snap</small></span><em>5 jardas</em></summary><p>Um jogador do ataque realiza movimento que simula o início da jogada antes do snap. A penalidade é de 5 jardas contra o ataque.</p></details>
+            <details><summary><span><b>Offside</b><small>Posicionamento irregular no snap</small></span><em>5 jardas</em></summary><p>Um jogador está em posição proibida em relação à linha de scrimmage quando a bola é colocada em jogo. São 5 jardas contra a defesa.</p></details>
+            <details><summary><span><b>Holding</b><small>Segurar ilegalmente o adversário</small></span><em>Variável</em></summary><p>Segurar ou restringir ilegalmente um adversário. O holding ofensivo resulta em 10 jardas de penalidade contra o ataque, o defensivo resulta em 5 jardas de penalidade contra a defesa e first down automático.</p></details>
+            <details><summary><span><b>Pass Interference</b><small>Interferência ilegal em passe</small></span><em>Variável</em></summary><p>Contato ou ação ilegal que impede uma oportunidade legítima de receber um passe. A interferência ofenciva gera uma penalidade de 10 jardas ao ataque. Já na defensiva, a bola é colocada no ponto onde ocorreu a falta e first down automático.</p></details>
+            <details><summary><span><b>Facemask</b><small>Contato ilegal com a grade do capacete</small></span><em>15 jardas</em></summary><p>Agarrar e torcer, puxar ou girar a grade facial do capacete de um adversário. A penalidade é de 15 jardas.</p></details>
+            <details><summary><span><b>Delay of Game</b><small>Atraso para iniciar a jogada</small></span><em>5 jardas</em></summary><p>Por exemplo, quando o ataque deixa o relógio de jogada chegar a zero sem realizar o snap. São 5 jardas de punição.</p></details>
+            <details><summary><span><b>Roughing the Passer</b><small>Contato ilegal com o passador</small></span><em>15 jardas</em></summary><p>Contato proibido com o passador protegido pelas regras. Resulta em uma penalidade de 15 jardas e first down automático.</p></details>
+        </div>
+        </div>
+        <footer class="nfl-guide__footer">Guia introdutório</footer>
+    </div>
+    </section>
+
+    
+
+    <section class="nflx" id="nfl-posicoes" aria-labelledby="nflx-heading">
+        <div class="nflx__shell">
+        <header class="nflx__intro">
+        <span class="nflx__eyebrow">GUIA INTERATIVO DA NFL</span>
+        <h2 id="nflx-heading">CONHEÇA AS POSIÇÕES</h2>
+        <p>Descubra o papel de cada jogador no futebol americano e acompanhe como ataque e defesa se movimentam durante uma jogada.</p>
+    </header>
+
+    <div class="nflx__tabs" role="tablist" aria-label="Explorar o campo">
+        <button type="button" class="nflx-tab is-active" data-mode="offense" role="tab" aria-selected="true">🏈 Ataque</button>
+        <button type="button" class="nflx-tab" data-mode="defense" role="tab" aria-selected="false">🛡️ Defesa</button>
+        <button type="button" class="nflx-tab nflx-tab--wide" data-mode="play" role="tab" aria-selected="false">▶ Como funciona uma jogada</button>
+    </div>
+
+    <div class="nflx__layout">
+      <div class="nflx__field-card">
+        <div class="nflx__field-heading">
+          <div>
+            <small>CAMPO INTERATIVO</small>
+            <strong id="nflx-formation">Ataque · formação ilustrativa</strong>
+          </div>
+          <span class="nflx__field-instruction" id="nflx-instruction">Selecione um jogador</span>
+    </div>
+
+    <div class="nflx__field" id="nflx-field" aria-label="Campo esquemático de futebol americano">
+        <div class="nflx__endzone nflx__endzone--top">END ZONE</div>
+        <div class="nflx__endzone nflx__endzone--bottom">END ZONE</div>
+        <div class="nflx__numbers" aria-hidden="true">
+            <span style="top:19%;left:8%">20</span><span style="top:19%;right:8%">20</span>
+            <span style="top:34%;left:8%">30</span><span style="top:34%;right:8%">30</span>
+            <span style="top:65%;left:8%">40</span><span style="top:65%;right:8%">40</span>
+            <span style="top:79%;left:8%">50</span><span style="top:79%;right:8%">50</span>
+    </div>
+        <div class="nflx__line"><span>LINHA DE SCRIMMAGE</span></div>
+
+          <!-- SVG desenhado por JavaScript a partir da posição real do jogador. -->
+        <svg class="nflx__trail" id="nflx-trail" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <polyline id="nflx-trail-glow" class="nflx__trail-glow" points="" />
+            <polyline id="nflx-trail-dashes" class="nflx__trail-dashes" points="" />
+            <circle id="nflx-trail-head" class="nflx__trail-head" cx="0" cy="0" r="4" />
+        </svg>
+
+          <div class="nflx__players" id="nflx-players"></div>
+          <div class="nflx__ball" id="nflx-ball" aria-hidden="true">🏈</div>
+        </div>
+
+        <div class="nflx__legend">
+          <span><i class="nflx__dot nflx__dot--offense"></i>Ataque</span>
+          <span><i class="nflx__dot nflx__dot--defense"></i>Defesa</span>
+          <span><i class="nflx__dot nflx__dot--active"></i>Selecionado</span>
+          <span class="nflx__legend-trail" id="nflx-trail-legend" hidden><i class="nflx__dash-sample"></i>Trajetória do selecionado</span>
+        </div>
+    </div>
+
+      <!-- Painel dos modos Ataque e Defesa -->
+    <aside class="nflx__panel" id="nflx-position-panel" aria-label="Detalhes da posição">
+        <div class="nflx__player-heading">
+          <span class="nflx__position-icon" id="nflx-position-icon">QB</span>
+          <div><small id="nflx-position-side">ATAQUE</small><h3 id="nflx-position-name">Quarterback</h3><span class="nflx__muted" id="nflx-position-code">QB</span></div>
+        </div>
+        <hr class="nflx__divider" />
+        <div class="nflx__text-group"><h4>🎯 PRINCIPAL FUNÇÃO</h4><p id="nflx-position-function"></p></div>
+        <div class="nflx__text-group"><h4>📋 O QUE ELE FAZ?</h4><p id="nflx-position-description"></p></div>
+        <div class="nflx__text-group"><h4>👀 DURANTE O JOGO, OBSERVE</h4><ul id="nflx-position-tasks"></ul></div>
+        <div class="nflx__matchup"><small>⚔️ DUELO / DESAFIO</small><strong id="nflx-position-matchup"></strong><p id="nflx-position-matchup-desc"></p></div>
+    </aside>
+
+      <!-- Painel do modo Simulador -->
+    <aside class="nflx__panel nflx__sim" id="nflx-sim-panel" aria-label="Simulador de jogadas" hidden>
+        <div class="nflx__sim-intro"><small>SIMULADOR DE JOGADAS</small><h3>Veja a jogada acontecer</h3><p>Escolha uma situação e veja a movimentação dos 22 jogadores. Clique em qualquer posição para seguir seu percurso tracejado.</p></div>
+        <div class="nflx__play-buttons" role="group" aria-label="Escolha a jogada">
+          <button type="button" class="nflx-play-choice is-active" data-play="pass" aria-pressed="true"><span class="nflx-play-choice__emoji">🏈</span><span><strong>Passe</strong><small>Rotas e lançamento</small></span></button>
+          <button type="button" class="nflx-play-choice" data-play="run" aria-pressed="false"><span class="nflx-play-choice__emoji">🏃</span><span><strong>Corrida</strong><small>Bloqueios e avanço</small></span></button>
+          <button type="button" class="nflx-play-choice" data-play="blitz" aria-pressed="false"><span class="nflx-play-choice__emoji">⚡</span><span><strong>Blitz</strong><small>Pressão sobre o QB</small></span></button>
+        </div>
+        <button type="button" class="nflx__start" id="nflx-start">▶ INICIAR JOGADA</button>
+        <div class="nflx__progress" id="nflx-progress" aria-label="Etapas da jogada"></div>
+        <div class="nflx__step" aria-live="polite" aria-atomic="true">
+          <small id="nflx-step-count">ESCOLHA UMA JOGADA</small>
+          <h4 id="nflx-step-title">Pronto para começar</h4>
+          <p id="nflx-step-description">Selecione um jogador para acompanhar sua trajetória e clique em “Iniciar jogada”.</p>
+        </div>
+        <div class="nflx__watching">
+          <span class="nflx__section-label"> <i class="nflx__dash-sample"></i> ACOMPANHANDO</span>
+          <div class="nflx__watching-title"><span id="nflx-watch-code">QB</span><div><strong id="nflx-watch-name">Quarterback</strong><small id="nflx-watch-side">Ataque</small></div></div>
+          <p id="nflx-watch-description">O Quarterback conduz a jogada.</p>
+          <p class="nflx__note">A linha amarela mostra o caminho percorrido desde a seleção. Toque em outro jogador para mudar o acompanhamento.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+        
+
+        <section id="super-bowls">
+            <div class="Super Bowls">
+                <h4>História dos Super Bowls</h4>
+
+                <p>Conheça um pouco da história da final esportiva anual mais assistida no mundo</p>
+
+            <article class="sb-card" data-sb-edicao="1">
+                <img src="imagens/super_bowl_1.png" 
+                alt="Card informativo do Super Bowl I: Green Bay Packers 35 x 10 Kansas City Chiefs" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="2">
+                <img src="imagens/super_bowl_2.png" 
+                alt="Card informativo do Super Bowl II: Green Bay Packers 33 x 14 Oakland Raiders" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="3">
+                <img src="imagens/super_bowl_3.png" 
+                alt="Card informativo do Super Bowl III: New York Jets 16 x 7 Baltimore Colts" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="4">
+                <img src="imagens/super_bowl_4.png" 
+                alt="Card informativo do Super Bowl IV: Kansas City Chiefs 23 x 7 Minnesota Vikings" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="5">
+                <img src="imagens/super_bowl_5.png" 
+                alt="Card informativo do Super Bowl V: Baltimore Colts 16 x 13 Dallas Cowboys" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="6">
+                <img src="imagens/super_bowl_6.png" 
+                alt="Card informativo do Super Bowl VI: Dallas Cowboys 24 x 3 Miami Dolphins" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="7">
+                <img src="imagens/super_bowl_7.png" 
+                alt="Card informativo do Super Bowl VII: Miami Dolphins 14 x 7 Washington Redskins" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="8">
+                <img src="imagens/super_bowl_8.png" 
+                alt="Card informativo do Super Bowl VIII: Miami Dolphins 24 x 7 Minnesota Vikings" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="9">
+                <img src="imagens/super_bowl_9.png" 
+                alt="Card informativo do Super Bowl IX: Pittsburgh Steelers 16 x 6 Minnesota Vikings" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="10">
+                <img src="imagens/super_bowl_10.png" 
+                alt="Card informativo do Super Bowl X: Pittsburgh Steelers 21 x 17 Dallas Cowboys" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="11">
+                <img src="imagens/super_bowl_11.png" 
+                alt="Card informativo do Super Bowl XI: Oakland Raiders 32 x 14 Minnesota Vikings" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="12">
+                <img src="imagens/super_bowl_12.png" 
+                alt="Card informativo do Super Bowl XII: Dallas Cowboys 27 x 10 Denver Broncos" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="13">
+                <img src="imagens/super_bowl_13.png" 
+                alt="Card informativo do Super Bowl XIII: Pittsburgh Steelers 35 x 31 Dallas Cowboys" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="14">
+                <img src="imagens/super_bowl_14.png" 
+                alt="Card informativo do Super Bowl XIV: Los Angeles Rams 19 x 31 Pittsburgh Steelers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="15">
+                <img src="imagens/super_bowl_15.png" 
+                alt="Card informativo do Super Bowl XV: Oakland Raiders 27 x 10 Philadelphia Eagles" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="16">
+                <img src="imagens/super_bowl_16.png" 
+                alt="Card informativo do Super Bowl XVI: San Francisco 49ers 26 x 21 Cincinnati Bengals" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="17">
+                <img src="imagens/super_bowl_17.png" 
+                alt="Card informativo do Super Bowl XVII: Washington Redskins 27 x 17 Miami Dolphins" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="18">
+                <img src="imagens/super_bowl_18.png" 
+                alt="Card informativo do Super Bowl XVIII: Los Angeles Raiders 38 x 9 Washington Redskins" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="19">
+                <img src="imagens/super_bowl_19.png" 
+                alt="Card informativo do Super Bowl XIX: San Francisco 49ers 38 x 16 Miami Dolphins" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="20">
+                <img src="imagens/super_bowl_20.png" 
+                alt="Card informativo do Super Bowl XX: Chicago Bears 46 x 10 New England Patriots" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="21">
+                <img src="imagens/super_bowl_21.png" 
+                alt="Card informativo do Super Bowl XXI: New York Giants 39 x 20 Denver Broncos" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="22">
+                <img src="imagens/super_bowl_22.png" 
+                alt="Card informativo do Super Bowl XXII: Washington Redskins 42 x 10 Denver Broncos" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="23">
+                <img src="imagens/super_bowl_23.png" 
+                alt="Card informativo do Super Bowl XXIII: San Francisco 49ers 20 x 16 Cincinnati Bengals" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="24">
+                <img src="imagens/super_bowl_24.png" 
+                alt="Card informativo do Super Bowl XXIV: San Francisco 49ers 55 x 10 Denver Broncos" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="25">
+                <img src="imagens/super_bowl_25.png" 
+                alt="Card informativo do Super Bowl XXV: Buffalo Bills 19 x 20 New York Giants" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="26">
+                <img src="imagens/super_bowl_26.png" 
+                alt="Card informativo do Super Bowl XXVI: Washington Redskins 37 x 24 Buffalo Bills" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="27">
+                <img src="imagens/super_bowl_27.png" 
+                alt="Card informativo do Super Bowl XXVII: Dallas Cowboys 52 x 17 Buffalo Bills" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="28">
+                <img src="imagens/super_bowl_28.png" 
+                alt="Card informativo do Super Bowl XXVIII: Dallas Cowboys 30 x 13 Buffalo Bills" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="29">
+                <img src="imagens/super_bowl_29.png" 
+                alt="Card informativo do Super Bowl XXIX: San Francisco 49ers 49 x 26 San Diego Chargers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="30">
+                <img src="imagens/super_bowl_30.png" 
+                alt="Card informativo do Super Bowl XXX: Dalla Cowboys 27 x 17 Pittsburgh Steelers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="31">
+                <img src="imagens/super_bowl_31.png" 
+                alt="Card informativo do Super Bowl XXXI: Green Bay Packers 35 x 21 New England Patriots" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="32">
+                <img src="imagens/super_bowl_32.png" 
+                alt="Card informativo do Super Bowl XXXII: Denver Broncos 31 x 24 Green Bay Packers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="33">
+                <img src="imagens/super_bowl_33.png" 
+                alt="Card informativo do Super Bowl XXXIII: Denver Broncos 34 x 19 Atlanta Falcons" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="34">
+                <img src="imagens/super_bowl_34.png" 
+                alt="Card informativo do Super Bowl XXXIV: St. Louis Rams 23 x 16 Tennessee Titans" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="35">
+                <img src="imagens/super_bowl_35.png" 
+                alt="Card informativo do Super Bowl XXXV: Baltimore Ravens 34 x 7 New York Giants" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="36">
+                <img src="imagens/super_bowl_36.png" 
+                alt="Card informativo do Super Bowl XXXVI: New England Patriots 20 x 17 St. Louis Rams" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="37">
+                <img src="imagens/super_bowl_37.png" 
+                alt="Card informativo do Super Bowl XXXVII: Tampa Bay Buccaneers 48 x 21 Oakland Raiders" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="38">
+                <img src="imagens/super_bowl_38.png" 
+                alt="Card informativo do Super Bowl XXXVIII: Carolina Panthers 29 x 32 New England Patriots" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="39">
+                <img src="imagens/super_bowl_39.png" 
+                alt="Card informativo do Super Bowl XXXIX: New England Patriots 24 x 21 Philadelphia Eagles" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="40">
+                <img src="imagens/super_bowl_40.png" 
+                alt="Card informativo do Super Bowl XL: Seattle Seahawks 10 x 21 Pittsburgh Steelers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="41">
+                <img src="imagens/super_bowl_41.png" 
+                alt="Card informativo do Super Bowl XLI: Indianapolis Colts 29 x 17 Chicago Bears" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="42">
+                <img src="imagens/super_bowl_42.png" 
+                alt="Card informativo do Super Bowl XLII: New York Giants 17 x 14 New England Patriots" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="43">
+                <img src="imagens/super_bowl_43.png" 
+                alt="Card informativo do Super Bowl XLIII: Pittsburgh Steelers 27 x 23 Arizona Cardinals" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="44">
+                <img src="imagens/super_bowl_44.png" 
+                alt="Card informativo do Super Bowl XLIV: New Orleans Saints 31 x 17 Indianapolis Colts" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="45">
+                <img src="imagens/super_bowl_45.png" 
+                alt="Card informativo do Super Bowl XLV: Green Bay Packers 31 x 25 Pittsburgh Steelers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="46">
+                <img src="imagens/super_bowl_46.png" 
+                alt="Card informativo do Super Bowl XLVI: New York Giants 21 x 17 New England Patriots" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="47">
+                <img src="imagens/super_bowl_47.png" 
+                alt="Card informativo do Super Bowl XLVII: Baltimore Ravens 34 x 31 San Francisco 49ers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="48">
+                <img src="imagens/super_bowl_48.png" 
+                alt="Card informativo do Super Bowl XLVIII: Seattle Seahawks 43 x 8 Denver Broncos" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="49">
+                <img src="imagens/super_bowl_49.png" 
+                alt="Card informativo do Super Bowl XLIX: New England Patriots 28 x 24 Seattle Seahawks" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="50">
+                <img src="imagens/super_bowl_50.png" 
+                alt="Card informativo do Super Bowl L: Carolina Panthers 10 x 24 Denver Broncos" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="51">
+                <img src="imagens/super_bowl_51.png" 
+                alt="Card informativo do Super Bowl LI: New England Patriots 34 x 28 Atlanta Falcons" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="52">
+                <img src="imagens/super_bowl_52.png" 
+                alt="Card informativo do Super Bowl LII: Philadelphia Eagles 41 x 33 New England Patriots" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="53">
+                <img src="imagens/super_bowl_53.png" 
+                alt="Card informativo do Super Bowl LIII: New England Patriots 13 x 3 Los Angeles Rams" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="54">
+                <img src="imagens/super_bowl_54.png" 
+                alt="Card informativo do Super Bowl LIV: Kansas City Chiefs 31 x 20 San Francisco 49ers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="55">
+                <img src="imagens/super_bowl_55.png" 
+                alt="Card informativo do Super Bowl LV: Tampa Bay Buccaneers 31 x 9 Kansas City Chiefs" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="56">
+                <img src="imagens/super_bowl_56.png" 
+                alt="Card informativo do Super Bowl LVI: Los Angeles Rams 23 x 20 Cincinnati Bengals" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="57">
+                <img src="imagens/super_bowl_57.png" 
+                alt="Card informativo do Super Bowl LVII: Kansas City Chiefs 38 x 35 Philadelphia Eagles" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="58">
+                <img src="imagens/super_bowl_58.png" 
+                alt="Card informativo do Super Bowl LVIII: Kansas City Chiefs 25 x 22 San Francisco 49ers" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="59">
+                <img src="imagens/super_bowl_59.png" 
+                alt="Card informativo do Super Bowl LIX: Kansas City Chiefs 22 x 44 Philadelphia Eagles" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            <article class="sb-card" data-sb-edicao="60">
+                <img src="imagens/super_bowl_60.png" 
+                alt="Card informativo do Super Bowl LX: New England Patriots 13 x 29 Seattle Seahawks" 
+                class="sb-card-img" 
+                loading="lazy">
+            </article>
+            <br>
+
+            </div>
+        
+        </section>
+    </main>
+</body>
+</html>

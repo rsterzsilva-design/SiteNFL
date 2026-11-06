@@ -1,0 +1,97 @@
+/* Todos os estilos estão isolados no #super-bowls. */
+#super-bowls [data-sb-edicao][hidden] { display: none !important; }
+#super-bowls [data-sb-edicao] { cursor: pointer; }
+#super-bowls [data-sb-edicao]:focus-visible { outline: 3px solid #ef4444; outline-offset: 4px; }
+
+#super-bowls .sb-filtro,
+#super-bowls .sb-detalhes { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+#super-bowls .sb-filtro {
+  background: linear-gradient(135deg, #111f36, #0a1323);
+  border: 1px solid #2a3d58;
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 24px);
+  margin-block: 20px 26px;
+  color: #eef3fb;
+  width: 100%;
+  box-sizing: border-box;
+}
+#super-bowls .sb-filtro__cabecalho { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+#super-bowls .sb-filtro__titulo { color: #fff; font-size: clamp(18px, 2.4vw, 22px); font-weight: 800; display: block; }
+#super-bowls .sb-filtro__ajuda { color: #b3c2d6; font-size: 13px; margin: 6px 0 0; line-height: 1.55; }
+#super-bowls .sb-filtro__contador { font-size: 12px; font-weight: 700; color: #c8d7ed; padding: 7px 10px; background: #243754; border-radius: 99px; white-space: nowrap; }
+#super-bowls .sb-filtro__linha { border: 1px solid #4b607b; border-radius: 10px; background: #fff; display: flex; align-items: center; padding: 0 12px; gap: 10px; min-height: 52px; }
+#super-bowls .sb-filtro__linha:focus-within { outline: 2px solid #e73845; outline-offset: 2px; }
+#super-bowls .sb-filtro__icone { font-size: 27px; line-height: 1; color: #334b6d; user-select: none; }
+#super-bowls .sb-filtro__campo { flex: 1; min-width: 0; background: transparent; color: #13233d; border: 0; outline: none; font: inherit; font-size: 15px; height: 49px; padding: 0; box-shadow: none; }
+#super-bowls .sb-filtro__campo::placeholder { color: #6b7d90; }
+#super-bowls .sb-filtro__limpar { border: 0; background: #e7ecf4; color: #19304f; font: inherit; font-size: 12px; font-weight: 800; padding: 9px 13px; border-radius: 8px; cursor: pointer; }
+#super-bowls .sb-filtro__limpar:hover { background: #d4e1ef; }
+#super-bowls .sb-filtro__limpar[hidden], #super-bowls .sb-filtro__vazio[hidden] { display: none !important; }
+#super-bowls .sb-filtro__vazio { color: #ffd6dc; margin: 15px 0 0; font-size: 14px; }
+
+/* O <dialog> é um elemento nativo que cuida de Esc, foco e camada superior. */
+#super-bowls .sb-detalhes {
+  color: #15233a;
+  background: #f6f8fc;
+  width: min(92vw, 850px);
+  max-height: min(88vh, 900px);
+  border: 1px solid #4c607b;
+  border-radius: 18px;
+  padding: 0;
+  box-shadow: 0 28px 100px #000a;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+}
+#super-bowls .sb-detalhes::backdrop { background: rgb(1 7 17 / 82%); backdrop-filter: blur(5px); }
+#super-bowls .sb-detalhes__moldura { position: relative; }
+#super-bowls .sb-detalhes__fechar { position: sticky; top: 12px; left: calc(100% - 55px); z-index: 2; width: 36px; height: 36px; margin: 12px 12px -48px auto; display: block; border-radius: 50%; border: 1px solid #617a9d; background: #f2f6ff; color: #162946; font-size: 25px; line-height: 1; cursor: pointer; }
+#super-bowls .sb-detalhes__fechar:hover { background: #ffebee; }
+#super-bowls .sb-detalhes__fechar:focus-visible { outline: 3px solid #e23b4b; }
+#super-bowls .sb-detalhes__topo { background: radial-gradient(circle at 75% 5%, #1e3a60 0%, #0c1c33 63%); color: white; padding: 28px clamp(18px, 4vw, 40px) 30px; }
+#super-bowls .sb-detalhes__etiqueta { color: #a8c6e8; text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 800; }
+#super-bowls .sb-detalhes__topo h2 { color: #fff; font-weight: 900; font-size: clamp(27px, 5vw, 37px); line-height: 1.15; margin: 6px 0 24px; }
+#super-bowls .sb-detalhes__confronto { display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: center; }
+#super-bowls .sb-detalhes__equipe { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+#super-bowls .sb-detalhes__equipe:last-child { text-align: right; }
+#super-bowls .sb-detalhes__equipe small { font-size: 10px; letter-spacing: .12em; color: #a4b8d1; font-weight: 800; }
+#super-bowls .sb-detalhes__equipe:first-child small { color: #82e8b1; }
+#super-bowls .sb-detalhes__equipe strong { font-size: clamp(12px, 2vw, 18px); line-height: 1.35; overflow-wrap: anywhere; }
+#super-bowls .sb-detalhes__placar { font-size: clamp(20px, 4vw, 34px); font-weight: 900; letter-spacing: -.05em; color: #fff; white-space: nowrap; }
+#super-bowls .sb-detalhes__corpo { padding: 4px clamp(18px, 4vw, 40px) 32px; }
+#super-bowls .sb-detalhes__secao { margin-top: 24px; }
+#super-bowls .sb-detalhes__secao h3 { color: #102a4a; font-size: 18px; font-weight: 850; margin: 0 0 12px; }
+#super-bowls .sb-detalhes__secao p { color: #33465f; line-height: 1.7; font-size: 15px; margin: 0; }
+#super-bowls .sb-detalhes__tabela-rolagem { overflow-x: auto; border: 1px solid #d6dfeb; border-radius: 12px; }
+#super-bowls .sb-detalhes__tabela { width: 100%; border-collapse: collapse; min-width: 430px; color: #152b49; font-size: 14px; }
+#super-bowls .sb-detalhes__tabela caption { text-align: left; padding: 10px 13px; font-size: 12px; color: #5a6980; background: #e8eff7; }
+#super-bowls .sb-detalhes__tabela th, #super-bowls .sb-detalhes__tabela td { padding: 12px 10px; border-top: 1px solid #e3eaf3; text-align: center; }
+#super-bowls .sb-detalhes__tabela thead th { background: #eaf0f7; color: #4c5a70; font-weight: 800; }
+#super-bowls .sb-detalhes__tabela th:first-child { text-align: left; min-width: 135px; }
+#super-bowls .sb-detalhes__tabela tbody th { font-size: 13px; }
+#super-bowls .sb-detalhes__vencedor { background: #e7f5ee; }
+#super-bowls .sb-detalhes__total { font-weight: 900; color: #c21e32; }
+#super-bowls .sb-detalhes__ficha { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
+#super-bowls .sb-detalhes__ficha > div { padding: 14px; background: #fff; border: 1px solid #e0e8f1; border-radius: 11px; min-width: 0; }
+#super-bowls .sb-detalhes__ficha dt { color: #68788d; font-size: 12px; margin-bottom: 7px; }
+#super-bowls .sb-detalhes__ficha dd { color: #14243a; font-size: 14px; font-weight: 750; line-height: 1.45; margin: 0; overflow-wrap: anywhere; }
+#super-bowls .sb-detalhes__ficha .sb-detalhes__item-largo { grid-column: 1 / -1; }
+#super-bowls .sb-detalhes__fonte { display: inline-flex; gap: 7px; color: #a5192d; text-decoration: underline; text-underline-offset: 3px; font-weight: 700; font-size: 13px; margin-top: 22px; }
+#super-bowls .sb-detalhes__fonte:hover { color: #751021; }
+
+@media (max-width: 560px) {
+  #super-bowls .sb-filtro__cabecalho { gap: 8px; }
+  #super-bowls .sb-detalhes { width: 96vw; max-height: 93dvh; border-radius: 12px; }
+  #super-bowls .sb-detalhes__confronto { grid-template-columns: 1fr; gap: 10px; text-align: left; }
+  #super-bowls .sb-detalhes__equipe:last-child { text-align: left; }
+  #super-bowls .sb-detalhes__placar { font-size: 26px; }
+  #super-bowls .sb-detalhes__ficha { grid-template-columns: 1fr; }
+}
+
+/* Integração com a grade de três colunas existente no Projeto_NFL_Estilizado.html. */
+#super-bowls .Super.Bowls > .sb-filtro { grid-column: 1 / -1; margin: 0 0 3px; }
+#super-bowls .sb-detalhes__secao { margin: 24px 0 0; scroll-margin: 0; }
+#super-bowls .sb-detalhes__topo, #super-bowls .sb-detalhes__corpo { box-sizing: border-box; }
+#super-bowls .sb-filtro__titulo, #super-bowls .sb-detalhes h2,
+#super-bowls .sb-detalhes h3 { font-family: 'Barlow Condensed', Impact, sans-serif; }
+#super-bowls .sb-filtro { font-family: 'Inter', Arial, sans-serif; }

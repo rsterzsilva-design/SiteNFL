@@ -1,0 +1,197 @@
+/* Escopo isolado: nenhuma regra modifica elementos fora de #nfl-franquias. */
+#nfl-franquias {
+  --nflf-bg: #071422; --nflf-ink: #f3f8ff; --nflf-soft: #a7b7c9;
+  --nflf-line: rgba(169, 198, 225, .15); --nflf-cyan: #35c9ff;
+  --nflf-surface: #102338; --nflf-yellow: #ffd666;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(ellipse 70% 27% at 48% 2%, rgba(22,98,163,.27), transparent 90%), #071422;
+  color: var(--nflf-ink); padding: 66px 0 48px; isolation: isolate;
+  min-height: 640px; line-height: 1.5; box-sizing: border-box;
+}
+#nfl-franquias *, #nfl-franquias *::before, #nfl-franquias *::after {box-sizing:border-box}
+#nfl-franquias button, #nfl-franquias input {font: inherit}
+#nfl-franquias button {cursor:pointer}
+#nfl-franquias button:focus-visible, #nfl-franquias input:focus-visible, #nfl-franquias a:focus-visible {outline:3px solid var(--nflf-cyan);outline-offset:3px}
+#nfl-franquias .nflf-shell {width:min(1320px, calc(100% - 48px));margin-inline:auto}
+#nfl-franquias .nflf-intro {display:flex;align-items:flex-end;justify-content:space-between;gap:36px;padding-bottom:43px;border-bottom:1px solid var(--nflf-line)}
+#nfl-franquias .nflf-overline {font-size:.72rem;letter-spacing:.22em;color:var(--nflf-cyan);font-weight:800;display:flex;align-items:center;gap:10px}
+#nfl-franquias .nflf-pulse {display:inline-block;flex:none;width:8px;height:8px;background:#4de8d9;border-radius:50%;box-shadow:0 0 0 4px rgba(77,232,217,.09),0 0 18px rgba(77,232,217,.48)}
+#nfl-franquias .nflf-intro h2 {margin:20px 0 15px;font-size:clamp(2.25rem,5.4vw,5.4rem);line-height:.99;letter-spacing:-.055em;font-weight:950}
+#nfl-franquias .nflf-intro h2 span {color:var(--nflf-cyan)}
+#nfl-franquias .nflf-intro p {margin:0;max-width:670px;color:var(--nflf-soft);font-size:1.01rem}
+#nfl-franquias .nflf-intro-facts {display:flex;gap:12px;flex:none}
+#nfl-franquias .nflf-fact {background:linear-gradient(145deg,rgba(35,76,117,.55),rgba(13,28,46,.75));border:1px solid var(--nflf-line);min-width:122px;padding:20px 13px 17px;text-align:center;border-radius:13px}
+#nfl-franquias .nflf-fact strong {display:block;font-size:2.25rem;line-height:1.1;letter-spacing:-.05em}
+#nfl-franquias .nflf-fact span {display:block;margin-top:8px;font-size:.59rem;letter-spacing:.14em;font-weight:800;color:var(--nflf-soft)}
+#nfl-franquias .nflf-toolbar {display:flex;justify-content:space-between;gap:18px;margin-top:35px;align-items:stretch}
+#nfl-franquias .nflf-search-wrap {position:relative;display:flex;align-items:center;width:min(560px,100%)}
+#nfl-franquias .nflf-search-wrap svg {position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;fill:none;stroke:#94b2ce;stroke-width:2;stroke-linecap:round}
+#nfl-franquias .nflf-search-wrap input {width:100%;padding:16px 18px 16px 50px;border:1px solid #2a4764;border-radius:12px;color:#fff;background:rgba(17,37,57,.95);outline:none;min-width:0}
+#nfl-franquias .nflf-search-wrap input::placeholder {color:#8da7c1}
+#nfl-franquias .nflf-conferences {display:flex;padding:5px;border-radius:12px;background:#102439;border:1px solid #2a4764;gap:5px}
+#nfl-franquias .nflf-conferences button {border:0;border-radius:8px;background:transparent;color:#afc2d6;padding:10px 24px;min-width:78px;font-size:.86rem;font-weight:800}
+#nfl-franquias .nflf-conferences button.is-active {background:#e4f6ff;color:#071b2c;box-shadow:0 3px 14px rgba(0,0,0,.16)}
+#nfl-franquias .nflf-divisions {display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+#nfl-franquias .nflf-divisions button {border:1px solid #29445f;background:#0e2033;border-radius:999px;padding:9px 17px;color:#c5d3e3;font-size:.79rem;font-weight:750}
+#nfl-franquias .nflf-divisions button.is-active {border-color:var(--nflf-cyan);background:rgba(53,201,255,.13);color:#9ee8ff}
+#nfl-franquias .nflf-result-heading {display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px;margin-bottom:15px}
+#nfl-franquias .nflf-result-heading p {margin:0;font-size:.94rem;color:#edf7ff;font-weight:800}
+#nfl-franquias .nflf-result-heading>span {font-size:.65rem;color:#839ab0;letter-spacing:.14em;font-weight:800}
+#nfl-franquias .nflf-team-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+#nfl-franquias .nflf-team-card {position:relative;text-align:left;overflow:hidden;border:1px solid rgba(151,184,215,.18);border-radius:16px;min-height:226px;background:linear-gradient(135deg,rgba(31,54,78,.95),rgba(14,29,46,.97) 68%);color:var(--nflf-ink);padding:20px 20px 17px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;display:flex;flex-direction:column;align-items:stretch}
+#nfl-franquias .nflf-team-card::before {content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--team-color,#35c9ff);opacity:.85}
+#nfl-franquias .nflf-team-card::after {content:"";position:absolute;right:-30px;top:-38px;width:156px;height:156px;border-radius:50%;background:var(--team-color,#35c9ff);opacity:.075;pointer-events:none}
+#nfl-franquias .nflf-team-card:hover {transform:translateY(-5px);border-color:var(--team-color,#35c9ff);box-shadow:0 16px 35px rgba(0,0,0,.28)}
+#nfl-franquias .nflf-card-top {display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+#nfl-franquias .nflf-logo-frame {height:88px;width:98px;display:grid;place-items:center}
+#nfl-franquias .nflf-logo-frame img {max-width:100%;max-height:83px;object-fit:contain;filter:drop-shadow(0 8px 8px rgba(0,0,0,.24))}
+#nfl-franquias .nflf-logo-fallback {font-size:1.4rem;font-weight:950;color:#fff;letter-spacing:-.08em}
+#nfl-franquias .nflf-card-top .nflf-conference-tag {padding:5px 9px;border:1px solid rgba(150,188,218,.22);border-radius:6px;font-size:.67rem;letter-spacing:.06em;font-weight:850;color:#b9d2e8}
+#nfl-franquias .nflf-card-bottom {margin-top:auto}
+#nfl-franquias .nflf-team-title {display:block;font-size:1.13rem;line-height:1.17;letter-spacing:-.02em;margin:9px 0 7px;color:#fff}
+#nfl-franquias .nflf-card-meta {margin:0;display:flex;align-items:center;gap:7px;color:#a7bfd4;font-size:.76rem}
+#nfl-franquias .nflf-card-meta span {display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--team-color,#35c9ff)}
+#nfl-franquias .nflf-card-link {display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px;padding-top:12px;border-top:1px solid var(--nflf-line);color:#bdeaff;font-size:.72rem;font-weight:800;letter-spacing:.05em}
+#nfl-franquias .nflf-card-link b {font-size:1.1rem;line-height:1}
+#nfl-franquias .nflf-empty {padding:40px;text-align:center;border:1px dashed #375772;background:#0f2135;border-radius:15px;margin-bottom:20px}
+#nfl-franquias .nflf-empty[hidden] {display:none}
+#nfl-franquias .nflf-empty strong,#nfl-franquias .nflf-empty span {display:block}
+#nfl-franquias .nflf-empty span {color:var(--nflf-soft);margin-top:8px}
+#nfl-franquias .nflf-empty button {border:0;background:#d9f5ff;color:#081827;border-radius:8px;padding:10px 18px;font-weight:800;margin-top:18px}
+#nfl-franquias .nflf-footer {margin-top:29px;padding-top:16px;border-top:1px solid var(--nflf-line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#899fb5;font-size:.69rem}
+#nfl-franquias .nflf-footer .nflf-pulse {width:6px;height:6px;margin-right:9px}
+
+/* MODAL com backdrop e rolagem próprios */
+#nfl-franquias .nflf-dialog {position:fixed;inset:0;margin:auto;padding:0;border:1px solid rgba(170,202,230,.27);background:#0b1a2b;color:#eef7ff;width:min(1150px,calc(100vw - 34px));max-width:1150px;max-height:min(92vh,1000px);overflow-x:hidden;overflow-y:auto;border-radius:20px;box-shadow:0 35px 100px rgba(0,0,0,.68)}
+#nfl-franquias .nflf-dialog::backdrop {background:rgba(2,9,17,.79);backdrop-filter:blur(9px)}
+#nfl-franquias .nflf-dialog[open] {animation:nflf-open .18s ease-out}
+@keyframes nflf-open {from{opacity:0;transform:translateY(13px) scale(.988)}to{opacity:1;transform:translateY(0) scale(1)}}
+#nfl-franquias .nflf-close {position:sticky;z-index:5;float:right;top:13px;right:15px;width:40px;height:40px;border-radius:50%;border:1px solid #647b94;color:#fff;background:#19344c;font-size:1.7rem;line-height:1;display:grid;place-items:center;margin:13px 13px -55px 0}
+#nfl-franquias .nflf-detail-head {display:flex;align-items:center;gap:32px;background:radial-gradient(circle at 85% 20%,var(--team-glow),transparent 49%),linear-gradient(120deg,#152d46,#0c1b2b);border-bottom:1px solid #2b4863;padding:40px 50px 34px}
+#nfl-franquias .nflf-detail-logo {width:174px;height:146px;object-fit:contain;flex:none;filter:drop-shadow(0 12px 10px rgba(0,0,0,.23))}
+#nfl-franquias .nflf-detail-overline {color:#9adcf5;font-size:.7rem;letter-spacing:.18em;font-weight:850;margin:0 0 10px}
+#nfl-franquias .nflf-detail-head h2 {font-size:clamp(1.8rem,4vw,3.45rem);line-height:1.02;letter-spacing:-.05em;margin:0 0 13px;color:#fff}
+#nfl-franquias .nflf-detail-location {color:#bed0e1;font-size:.9rem;margin:0}
+#nfl-franquias .nflf-detail-body {padding:29px 46px 42px}
+#nfl-franquias .nflf-detail-facts {display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:27px}
+#nfl-franquias .nflf-detail-fact {border:1px solid #29445e;background:#10253b;padding:14px;border-radius:9px;min-width:0}
+#nfl-franquias .nflf-detail-fact small {display:block;color:#8fb2cd;font-size:.66rem;letter-spacing:.11em;font-weight:850;margin-bottom:5px;text-transform:uppercase}
+#nfl-franquias .nflf-detail-fact strong {display:block;font-size:.88rem;line-height:1.35;overflow-wrap:anywhere}
+#nfl-franquias .nflf-detail-body h3 {font-size:1rem;letter-spacing:.09em;font-weight:850;color:#fafcff;margin:0 0 12px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+#nfl-franquias .nflf-detail-body h3::before {content:"";width:21px;height:4px;background:var(--team-color,#35c9ff);display:inline-block;border-radius:3px}
+#nfl-franquias .nflf-history {font-size:.94rem;line-height:1.76;color:#c1d2e3;margin:0 0 28px;max-width:900px}
+#nfl-franquias .nflf-legend-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:30px}
+#nfl-franquias .nflf-legend {background:#11253a;border:1px solid #27435d;border-radius:12px;padding:15px;min-height:96px}
+#nfl-franquias .nflf-legend span {display:block;color:var(--team-color,#35c9ff);font-size:.64rem;font-weight:900;letter-spacing:.12em;margin-bottom:8px}
+#nfl-franquias .nflf-legend strong {display:block;font-size:.98rem;line-height:1.2;margin-bottom:5px}
+#nfl-franquias .nflf-legend small {color:#9db4ca;font-size:.73rem}
+/* Quadro único por franquia: exibe integralmente o material fornecido pelo usuário. */
+#nfl-franquias .nflf-uniform-board {margin:0;border:1px solid #36516a;background:linear-gradient(135deg,#172f46,#0c1b2d);border-radius:16px;padding:15px;overflow:hidden}
+#nfl-franquias .nflf-uniform-board-heading {display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 2px 13px;flex-wrap:wrap}
+#nfl-franquias .nflf-uniform-board-heading>div {display:flex;flex-direction:column;gap:3px}
+#nfl-franquias .nflf-board-eyebrow {font-size:.62rem;letter-spacing:.13em;color:#98cde4;font-weight:850}
+#nfl-franquias .nflf-uniform-board-heading strong {font-size:1.08rem;line-height:1.2;color:#f6fbff}
+#nfl-franquias .nflf-board-chip {display:inline-flex;background:#d6f2ff;color:#0b2938;border-radius:999px;padding:6px 10px;font-size:.64rem;font-weight:850}
+#nfl-franquias .nflf-uniform-board-frame {display:flex;align-items:center;justify-content:center;background:#fff;border-radius:11px;overflow:hidden;min-height:180px;position:relative}
+#nfl-franquias .nflf-uniform-board-img {display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#fff}
+#nfl-franquias .nflf-uniform-board-img[hidden],#nfl-franquias .nflf-uniform-board-error[hidden]{display:none}
+#nfl-franquias .nflf-uniform-board-error {color:#233b50;background:#fff;text-align:center;padding:24px}
+#nfl-franquias .nflf-uniform-board figcaption {padding:13px 3px 2px;color:#bbcee0;font-size:.77rem;line-height:1.6}
+#nfl-franquias .nflf-kit-disclaimer {font-size:.74rem;color:#9bb4cb;line-height:1.65;margin:15px 0 0}
+#nfl-franquias .nflf-stadium-note {margin:-16px 0 25px;color:#ffde91;font-size:.79rem;line-height:1.5}
+#nfl-franquias .nflf-detail-links {display:flex;gap:12px;margin-top:27px;flex-wrap:wrap}
+#nfl-franquias .nflf-detail-links a {display:inline-flex;align-items:center;gap:8px;color:#e6f8ff;font-weight:800;font-size:.8rem;text-decoration:none;border:1px solid #3a6686;border-radius:9px;padding:10px 15px;background:#173650}
+#nfl-franquias .nflf-detail-links a:hover {background:#214665}
+@media(max-width:1050px) {
+  #nfl-franquias .nflf-intro {align-items:flex-start;flex-direction:column}
+  #nfl-franquias .nflf-intro-facts {width:100%}
+  #nfl-franquias .nflf-fact {flex:1}
+  #nfl-franquias .nflf-team-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px) {
+  #nfl-franquias {padding:45px 0 35px}
+  #nfl-franquias .nflf-shell {width:calc(100% - 30px)}
+  #nfl-franquias .nflf-intro {padding-bottom:27px}
+  #nfl-franquias .nflf-intro h2 {font-size:clamp(2rem,8vw,3.5rem)}
+  #nfl-franquias .nflf-fact {min-width:0;padding:13px 6px}
+  #nfl-franquias .nflf-fact strong {font-size:1.7rem}
+  #nfl-franquias .nflf-fact span {font-size:.49rem}
+  #nfl-franquias .nflf-toolbar {flex-direction:column;margin-top:25px;gap:12px}
+  #nfl-franquias .nflf-search-wrap {width:100%}
+  #nfl-franquias .nflf-conferences button {flex:1}
+  #nfl-franquias .nflf-result-heading>span {display:none}
+  #nfl-franquias .nflf-team-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  #nfl-franquias .nflf-team-card {padding:15px;min-height:210px}
+  #nfl-franquias .nflf-logo-frame {width:82px;height:79px}
+  #nfl-franquias .nflf-logo-frame img {max-height:70px}
+  #nfl-franquias .nflf-team-title {display:block;font-size:.99rem}
+  #nfl-franquias .nflf-detail-head {padding:42px 22px 25px;gap:16px}
+  #nfl-franquias .nflf-detail-logo {width:106px;height:103px}
+  #nfl-franquias .nflf-detail-body {padding:22px 20px 30px}
+  #nfl-franquias .nflf-detail-facts {grid-template-columns:repeat(2,1fr)}
+  #nfl-franquias .nflf-legend-grid {grid-template-columns:1fr}
+  #nfl-franquias .nflf-legend {min-height:0}
+}
+@media(max-width:430px) {
+  #nfl-franquias .nflf-team-card {padding:12px;min-height:196px}
+  #nfl-franquias .nflf-card-top .nflf-conference-tag {font-size:.58rem;padding:4px 6px}
+  #nfl-franquias .nflf-logo-frame {width:68px;height:71px}
+  #nfl-franquias .nflf-logo-frame img {max-height:63px}
+  #nfl-franquias .nflf-detail-head {flex-direction:column;align-items:flex-start;padding-top:54px}
+  #nfl-franquias .nflf-detail-logo {height:94px}
+  #nfl-franquias .nflf-detail-facts {grid-template-columns:1fr}
+  #nfl-franquias .nflf-uniform-board {padding:8px}
+  #nfl-franquias .nflf-board-chip {font-size:.57rem}
+}
+@media(prefers-reduced-motion:reduce) {
+  #nfl-franquias *,#nfl-franquias *::before,#nfl-franquias *::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+#nfl-franquias .nflf-alert {color:#ffdf88;background:#233042;border:1px solid #5e593a;border-radius:12px;padding:15px;}
+
+
+/* PADRONIZAÇÃO DAS IMAGENS DOS UNIFORMES */
+
+#nfl-franquias .nflf-uniform-board-frame {
+    width: 100%;
+    max-width: 780px;
+    height: 430px;
+    min-height: 0;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* IMAGEM DOS UNIFORMES */
+
+#nfl-franquias .nflf-uniform-board-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* TABLETS */
+
+@media (max-width: 760px) {
+    #nfl-franquias .nflf-uniform-board-frame {
+        height: min(300px, 66vw);
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 430px) {
+    #nfl-franquias .nflf-uniform-board-frame {
+        height: min(240px, 66vw);
+    }
+}

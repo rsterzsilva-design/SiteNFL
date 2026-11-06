@@ -1,0 +1,60 @@
+/* Todos os seletores estão isolados no prefixo nfl-standings */
+#nfl-classificacao.nfl-standings {
+  --nfl-fundo: #080f20;
+  --nfl-painel: #111e33;
+  --nfl-borda: #263955;
+  --nfl-texto: #f4f7ff;
+  --nfl-suave: #aebdd4;
+  --nfl-destaque: #df2338;
+  color: var(--nfl-texto);
+  background: linear-gradient(145deg, #101c32, var(--nfl-fundo) 65%);
+  border: 1px solid var(--nfl-borda);
+  border-radius: 20px;
+  padding: clamp(16px, 3vw, 34px);
+  margin-block: 28px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+  isolation: isolate;
+}
+#nfl-classificacao *, #nfl-classificacao *::before, #nfl-classificacao *::after { box-sizing: border-box; }
+#nfl-classificacao .nfl-standings__topo { display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+#nfl-classificacao .nfl-standings__etiqueta { color:#ff6c7b; font-size:.74rem; font-weight:800; letter-spacing:.15em; margin:0 0 8px; }
+#nfl-classificacao h2 { color:var(--nfl-texto); font-size:clamp(1.5rem, 3vw, 2.3rem); line-height:1.16; margin:0; }
+#nfl-classificacao .nfl-standings__subtitulo { margin:8px 0 0; color:var(--nfl-suave); }
+#nfl-classificacao button { font:inherit; cursor:pointer; }
+#nfl-classificacao .nfl-standings__botao { background:var(--nfl-destaque); color:white; font-weight:700; border:0; padding:11px 18px; border-radius:10px; }
+#nfl-classificacao .nfl-standings__botao:hover { background:#f02e46; }
+#nfl-classificacao .nfl-standings__botao:disabled { cursor:wait; opacity:.65; }
+#nfl-classificacao .nfl-standings__barra { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin:25px 0 16px; }
+#nfl-classificacao .nfl-standings__abas { display:flex; flex-wrap:wrap; gap:7px; }
+#nfl-classificacao .nfl-standings__aba { border:1px solid var(--nfl-borda); background:#17263e; border-radius:9px; color:var(--nfl-suave); padding:8px 15px; font-weight:750; }
+#nfl-classificacao .nfl-standings__aba.is-active { background:#edf3ff; color:#0d1930; border-color:#edf3ff; }
+#nfl-classificacao .nfl-standings__status { color:var(--nfl-suave); font-size:.82rem; margin:0; }
+#nfl-classificacao .nfl-standings__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+#nfl-classificacao .nfl-standings__card { min-width:0; overflow:hidden; background:var(--nfl-painel); border:1px solid var(--nfl-borda); border-radius:13px; }
+#nfl-classificacao .nfl-standings__cabecalho { display:flex; justify-content:space-between; align-items:center; padding:14px 16px; background:#192b47; border-bottom:1px solid var(--nfl-borda); }
+#nfl-classificacao .nfl-standings__divisao { color:white; font-weight:850; margin:0; font-size:1rem; }
+#nfl-classificacao .nfl-standings__sigla { font-size:.7rem; letter-spacing:.12em; font-weight:800; color:#a6b7d3; }
+#nfl-classificacao .nfl-standings__tabela { width:100%; border-collapse:collapse; table-layout:fixed; }
+#nfl-classificacao .nfl-standings__tabela th { text-align:center; color:#aebdd4; font-size:.7rem; padding:11px 4px; background:#122139; }
+#nfl-classificacao .nfl-standings__tabela th:nth-child(2) { text-align:left; }
+#nfl-classificacao .nfl-standings__tabela td { padding:11px 4px; text-align:center; font-variant-numeric:tabular-nums; font-weight:750; border-top:1px solid #23344c; }
+#nfl-classificacao .nfl-standings__tabela .nfl-standings__pos { width:30px; color:#8193ae; font-size:.78rem; }
+#nfl-classificacao .nfl-standings__tabela .nfl-standings__time-col { width:auto; }
+#nfl-classificacao .nfl-standings__tabela .nfl-standings__num { width:40px; }
+#nfl-classificacao .nfl-standings__tabela tbody tr:first-child { background:#1b304b; }
+#nfl-classificacao .nfl-standings__tabela tbody tr:first-child .nfl-standings__pos { color:#ff6c7b; }
+#nfl-classificacao .nfl-standings__time { display:flex; gap:9px; align-items:center; text-align:left; min-width:0; }
+#nfl-classificacao .nfl-standings__escudo { width:35px; height:35px; object-fit:contain; flex-shrink:0; }
+#nfl-classificacao .nfl-standings__nome { font-size:.81rem; line-height:1.3; overflow-wrap:anywhere; }
+#nfl-classificacao .nfl-standings__v { color:#66dbab; }
+#nfl-classificacao .nfl-standings__d { color:#ff8998; }
+#nfl-classificacao .nfl-standings__rodape { margin:17px 0 0; font-size:.76rem; color:var(--nfl-suave); line-height:1.55; }
+#nfl-classificacao button:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+@media (max-width:850px) { #nfl-classificacao .nfl-standings__grid { grid-template-columns:1fr; } }
+@media (max-width:430px) { #nfl-classificacao.nfl-standings { padding:12px; } 
+#nfl-classificacao .nfl-standings__escudo { width:27px; height:27px; } 
+#nfl-classificacao .nfl-standings__time { gap:5px; } 
+#nfl-classificacao .nfl-standings__tabela .nfl-standings__num { width:30px; } 
+#nfl-classificacao .nfl-standings__tabela .nfl-standings__pos { width:22px; } 
+#nfl-classificacao .nfl-standings__nome { font-size:.72rem; } }

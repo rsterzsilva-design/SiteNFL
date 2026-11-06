@@ -1,0 +1,58 @@
+/* Escopo exclusivo: #nfl-guide. Sem estilos globais. */
+#nfl-guide{--ng-bg:#0c1627;--ng-surface:#17253a;--ng-border:#30435c;--ng-muted:#b7c6d7;--ng-accent:#ed3448;box-sizing:border-box;color:#f5f8ff;font-family:Arial,Helvetica,sans-serif}
+#nfl-guide *,#nfl-guide *::before,#nfl-guide *::after{box-sizing:border-box}
+#nfl-guide .nfl-guide__wrap{max-width:1120px;margin:0 auto;padding:36px 24px;background:linear-gradient(135deg,#101e33,#0b1322 85%);border-radius:20px;border:1px solid #253a55}
+#nfl-guide .nfl-guide__header{text-align:center;margin-bottom:26px}
+#nfl-guide .nfl-guide__eyebrow{color:#ff6472;letter-spacing:3px;font-size:12px;font-weight:800;margin:0 0 12px}
+#nfl-guide h2{font-weight:900;font-size:clamp(25px,4vw,38px);line-height:1.13;margin:0 0 12px}
+#nfl-guide h2 span{color:#ff5264}
+#nfl-guide .nfl-guide__header>p:last-child{color:var(--ng-muted);margin:0 auto;max-width:650px;line-height:1.6}
+#nfl-guide .nfl-guide__tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:26px}
+#nfl-guide .nfl-guide__tab{color:#d4e1f0;background:#1a2b43;border:1px solid #31445f;padding:14px 10px;border-radius:12px;cursor:pointer;font:700 15px Arial,Helvetica,sans-serif;transition:background .2s,transform .2s,border-color .2s}
+#nfl-guide .nfl-guide__tab span{color:#ff6c7c;margin-right:5px;font-size:12px}
+#nfl-guide .nfl-guide__tab:hover{background:#263d5a;transform:translateY(-2px)}
+#nfl-guide .nfl-guide__tab.is-active{background:#b82538;border-color:#f86475;color:white}
+#nfl-guide .nfl-guide__tab.is-active span{color:#ffe3e8}
+#nfl-guide .nfl-guide__panel[hidden]{display:none!important}
+#nfl-guide .nfl-guide__intro{margin:0 0 20px}
+#nfl-guide h3{font-size:clamp(21px,2.6vw,27px);margin:0 0 8px}
+#nfl-guide .nfl-guide__intro p{color:var(--ng-muted);line-height:1.6;margin:0}
+#nfl-guide .nfl-guide__grid{display:grid;gap:14px}
+#nfl-guide .nfl-guide__grid--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+#nfl-guide .nfl-guide__card{background:var(--ng-surface);border:1px solid var(--ng-border);border-radius:14px;padding:20px;min-height:170px}
+#nfl-guide .nfl-guide__symbol{display:block;font-size:30px;margin-bottom:12px}
+#nfl-guide .nfl-guide__card strong{font-size:20px;display:block;margin-bottom:7px}
+#nfl-guide .nfl-guide__card p{font-size:14px;line-height:1.55;color:var(--ng-muted);margin:0}
+#nfl-guide .nfl-guide__hint{font-size:13px;color:var(--ng-muted);margin:18px 0 0}
+#nfl-guide .nfl-guide__steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+#nfl-guide .nfl-guide__step{display:flex;align-items:flex-start;gap:10px;padding:16px 12px;background:var(--ng-surface);border:1px solid var(--ng-border);border-radius:13px}
+#nfl-guide .nfl-guide__step>b{display:flex;flex-shrink:0;align-items:center;justify-content:center;border-radius:50%;background:#bf2d42;width:40px;height:40px;font-size:15px}
+#nfl-guide .nfl-guide__step>span{font-size:14px;font-weight:700;line-height:1.4}
+#nfl-guide .nfl-guide__step small{display:block;font-weight:400;font-size:12px;color:var(--ng-muted);margin-top:5px}
+#nfl-guide .nfl-guide__note{background:#23354c;border-left:4px solid #f14a5e;padding:16px 18px;border-radius:9px;line-height:1.55;color:#e7effb;margin-top:18px;font-size:14px}
+#nfl-guide .nfl-guide__grid--scores{grid-template-columns:repeat(5,minmax(0,1fr))}
+#nfl-guide .nfl-guide__score{cursor:pointer;border:1px solid var(--ng-border);border-radius:13px;background:var(--ng-surface);color:white;min-height:124px;padding:14px 8px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:10px;font-family:inherit;transition:transform .2s,border-color .2s,background .2s}
+#nfl-guide .nfl-guide__score:hover{transform:translateY(-2px);border-color:#fa7482}
+#nfl-guide .nfl-guide__score[aria-pressed="true"]{background:#a72438;border-color:#ff8491}
+#nfl-guide .nfl-guide__score>span{font-weight:700;font-size:11px;letter-spacing:.4px;text-align:center}
+#nfl-guide .nfl-guide__score strong{font-size:36px}
+#nfl-guide .nfl-guide__score small{font-size:13px;font-weight:400}
+#nfl-guide .nfl-guide__accordions{display:grid;gap:9px}
+#nfl-guide details{background:var(--ng-surface);border:1px solid var(--ng-border);border-radius:11px;overflow:hidden}
+#nfl-guide details[open]{border-color:#b64354}
+#nfl-guide summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:15px 18px;list-style:none}
+#nfl-guide summary::-webkit-details-marker{display:none}
+#nfl-guide summary span{display:grid;gap:4px}
+#nfl-guide summary b{font-size:15px}
+#nfl-guide summary small{font-size:12px;color:var(--ng-muted)}
+#nfl-guide summary em{font-style:normal;flex-shrink:0;font-weight:700;font-size:12px;color:#ff8491}
+#nfl-guide details p{border-top:1px solid var(--ng-border);padding:15px 18px;margin:0;color:#d7e2f1;font-size:14px;line-height:1.65}
+#nfl-guide .nfl-guide__footer{margin-top:26px;border-top:1px solid #253a55;padding-top:15px;text-align:center;color:#9db1ca;font-size:12px}
+#nfl-guide button:focus-visible,
+#nfl-guide summary:focus-visible{outline:3px solid #91c9ff;outline-offset:3px}@media(max-width:750px)
+{#nfl-guide .nfl-guide__grid--three{grid-template-columns:1fr}#nfl-guide .nfl-guide__steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+#nfl-guide .nfl-guide__grid--scores{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:520px)
+{#nfl-guide .nfl-guide__wrap{padding:24px 14px}#nfl-guide .nfl-guide__tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+#nfl-guide .nfl-guide__steps{grid-template-columns:1fr}
+#nfl-guide .nfl-guide__grid--scores{grid-template-columns:repeat(2,minmax(0,1fr))}
+#nfl-guide .nfl-guide__tab{font-size:14px}}
